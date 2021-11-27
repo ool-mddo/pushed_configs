@@ -10,8 +10,9 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
 
+    - name: Apply config changes
     - uses: stefanzweifel/git-auto-commit-action@v4
-    	with:
+      with:
         commit_message: Apply config changes
         branch: main
         repository: ./config	
