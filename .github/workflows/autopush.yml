@@ -6,6 +6,7 @@ jobs:
   config push:
     runs-on: self-hosted
   steps:
+    - name: checkout
     - uses: actions/checkout@v2
       with:
         ref: ${{ github.head_ref }}
