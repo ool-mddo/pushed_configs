@@ -1,0 +1,17 @@
+name: config push
+
+on: [push]
+
+jobs:
+  config push:
+    runs-on: self-hosted
+  steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+    	with:
+        commit_message: Apply config changes
+				branch: main
+				repository: ./config	
