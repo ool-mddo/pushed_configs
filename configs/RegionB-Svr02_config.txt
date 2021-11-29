@@ -1,17 +1,17 @@
 ! Command: show running-config
-! device: RegionB-Svr01 (vEOS-lab, EOS-4.27.0F)
+! device: RegionB-Svr02 (vEOS-lab, EOS-4.27.0F)
 !
 ! boot system flash:/vEOS-lab.swi
 !
 no aaa root
 !
-username vrnetlab role network-admin secret sha512 $6$p/HvCxsoB3fX5NUV$UByHvPxNCIS0GO28h6aUdDKciLi1Gk3xkuJJ62t/L1EDgde2.o81yLOLmhYSsXGdJ3cDZlhMAP6qgk.asSOOD.
+username vrnetlab role network-admin secret sha512 $6$T53eFGnqk.Hmz7z6$0qXe./tosXalMDjSf5xNBkkZVdyvIUIPpXSWwf5pPNu5q1h8eeMQ.cOF/TFTms8Qw7iEtI6ah/gc/uAWEwCd2/
 !
 transceiver qsfp default-mode 4x10G
 !
 service routing protocols model ribd
 !
-hostname RegionB-Svr01
+hostname RegionB-Svr02
 !
 spanning-tree mode mstp
 !
@@ -21,13 +21,13 @@ management api http-commands
 !
 interface Ethernet1
    no switchport
-   ip address 172.31.10.100/24
-   ipv6 address fc00:172:31:10::100/64
+   ip address 172.31.20.100/24
+   ipv6 address fc00:172:31:20::100/64
 !
 interface Ethernet2
    no switchport
-   ip address 172.31.110.100/24
-   ipv6 address fc00:172:31:110::100/64
+   ip address 172.31.120.100/24
+   ipv6 address fc00:172:31:120::100/64
 !
 interface Ethernet3
 !
@@ -74,8 +74,8 @@ ip routing
 !
 ipv6 unicast-routing
 !
-ip route 0.0.0.0/0 172.31.10.3
+ip route 0.0.0.0/0 172.31.20.3
 !
-ipv6 route ::/0 fc00:172:31:10::3
+ipv6 route ::/0 fc00:172:31:20::3
 !
 end
