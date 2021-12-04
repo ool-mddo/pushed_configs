@@ -9,6 +9,10 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Run ansible-playbook to get configs
+        run: |
+          cd ~kawaguchi/builder
+          ansible-playbook -i inventory/hosts project/playbooks/get_config.yml
       - name: checkout
         uses: actions/checkout@v2
         with:
@@ -20,5 +24,5 @@ jobs:
           commit_message: Apply config changes
           branch: main
           commit_user_name: GitHub Actions Bot
-          commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
-          commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
+          commit_user_email: my-github-actions-bot@example.org
+          commit_author: Author <actions@github.com>
