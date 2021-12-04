@@ -19,3 +19,6 @@ jobs:
         with:
           commit_message: Apply config changes
           branch: main
+          commit_user_name: GitHub Actions Bot
+          commit_user_email: my-github-actions-bot@example.org # defaults to "actions@github.com"
+          commit_author: Author <actions@github.com> # defaults to author of the commit that triggered the run
