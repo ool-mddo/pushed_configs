@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2021-11-22 12:44:51 UTC by root
+## Last commit: 2021-12-06 22:10:12 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-CE02;
@@ -277,6 +277,9 @@ protocols {
             interface ge-0/0/0.0;
             interface ge-0/0/1.0;
         }
+    }
+    lldp {
+        interface all;
     }
 }
 policy-options {

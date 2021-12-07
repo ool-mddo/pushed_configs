@@ -1,6 +1,6 @@
 Building configuration...
 !! IOS XR Configuration 5.3.2
-!! Last configuration change at Mon Nov 22 12:45:06 2021 by admin
+!! Last configuration change at Mon Dec  6 22:48:54 2021 by vrnetlab
 !
 hostname RegionA-PE01
 interface Loopback0
@@ -469,6 +469,8 @@ router bgp 65000
 !
 ssh server v2
 ssh server netconf port 830
+lldp
+!
 xml agent tty
 !
 netconf-yang agent
