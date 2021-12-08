@@ -1,7 +1,7 @@
 name: config-push
 
 on:
-	schdule:
+	schedule:
 		- cron: '00 */3 * * *'
 
 jobs:
