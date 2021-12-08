@@ -22,7 +22,6 @@ jobs:
 
       - name: Apply config changes
         uses: stefanzweifel/git-auto-commit-action@v4
-        working-directory: /tmp/configs
         with:
           commit_message: Apply config changes
           repository: ool-mddo/pushed_configs
