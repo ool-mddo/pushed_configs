@@ -1,8 +1,6 @@
 name: config-push
 
-on:
-  schedule:
-    - cron: '0 */1 * * *'
+on: [push]
 
 jobs:
   config-push:
@@ -24,7 +22,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply config changes
-          repository: ool-mddo/pushed_configs
+          repository: /tmp/configs/
           branch: main
           commit_user_name: GitHub Actions Bot
           commit_user_email: my-github-actions-bot@example.org
