@@ -45,12 +45,12 @@ MgmtEth0/0/CPU0/0 is up, line protocol is up
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     111926 packets input, 10905767 bytes, 0 total input drops
+     112255 packets input, 10930037 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 0 broadcast packets, 3989 multicast packets
+     Received 0 broadcast packets, 4012 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     88055 packets output, 41043994 bytes, 0 total output drops
+     88343 packets output, 41271534 bytes, 0 total output drops
      Output 2 broadcast packets, 0 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
@@ -73,13 +73,13 @@ GigabitEthernet0/0/0/0 is up, line protocol is up
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     260699 packets input, 22478951 bytes, 0 total input drops
+     262611 packets input, 22700740 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 1325 broadcast packets, 12748 multicast packets
+     Received 1333 broadcast packets, 13107 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     259282 packets output, 20796100 bytes, 0 total output drops
-     Output 16 broadcast packets, 11752 multicast packets
+     261172 packets output, 20981082 bytes, 0 total output drops
+     Output 16 broadcast packets, 12087 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
@@ -97,7 +97,7 @@ GigabitEthernet0/0/0/1 is up, line protocol is up
   loopback not set,
   Last link flapped 2w4d
   ARP type ARPA, ARP timeout 04:00:00
-  Last input never, output 00:00:16
+  Last input never, output 00:00:06
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
@@ -106,8 +106,8 @@ GigabitEthernet0/0/0/1 is up, line protocol is up
      Received 0 broadcast packets, 0 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     487181 packets output, 25993688 bytes, 0 total output drops
-     Output 394006 broadcast packets, 93175 multicast packets
+     490501 packets output, 26211178 bytes, 0 total output drops
+     Output 396481 broadcast packets, 94020 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
@@ -125,17 +125,17 @@ GigabitEthernet0/0/0/2 is up, line protocol is up
   loopback not set,
   Last link flapped 2w4d
   ARP type ARPA, ARP timeout 04:00:00
-  Last input 00:00:06, output 00:00:00
+  Last input 00:00:00, output 00:00:00
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     407414 packets input, 41106840 bytes, 0 total input drops
+     409970 packets input, 41364936 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 1 broadcast packets, 398328 multicast packets
+     Received 1 broadcast packets, 400826 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     376366 packets output, 37332810 bytes, 0 total output drops
-     Output 1 broadcast packets, 367276 multicast packets
+     378997 packets output, 37621962 bytes, 0 total output drops
+     Output 1 broadcast packets, 369849 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
@@ -157,13 +157,13 @@ GigabitEthernet0/0/0/3 is up, line protocol is up
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     407390 packets input, 41110378 bytes, 0 total input drops
+     409945 packets input, 41368348 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 0 broadcast packets, 398312 multicast packets
+     Received 0 broadcast packets, 400810 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     376387 packets output, 37434168 bytes, 0 total output drops
-     Output 2 broadcast packets, 367303 multicast packets
+     379011 packets output, 37723642 bytes, 0 total output drops
+     Output 2 broadcast packets, 369870 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
