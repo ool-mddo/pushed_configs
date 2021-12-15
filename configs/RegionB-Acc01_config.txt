@@ -34,29 +34,35 @@ interface Port-Channel2
    port-channel min-links 1
 !
 interface Ethernet1
+   description to_RegionB-CE01_ge-0/0/4
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet2
+   description to_RegionB-CE01_ge-0/0/5
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet3
+   description to_RegionB-CE02_ge-0/0/4
    load-interval 30
    speed forced 1000full
    channel-group 2 mode active
 !
 interface Ethernet4
+   description to_RegionB-CE02_ge-0/0/5
    load-interval 30
    speed forced 1000full
    channel-group 2 mode active
 !
 interface Ethernet5
+   description to_RegionB-Svr01_Ethernet1
    switchport access vlan 1010
 !
 interface Ethernet6
+   description to_RegionB-Svr01_Ethernet2
    switchport access vlan 1110
 !
 interface Ethernet7

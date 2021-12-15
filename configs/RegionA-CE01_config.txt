@@ -43,6 +43,7 @@ interface Port-Channel3
    port-channel min-links 1
 !
 interface Ethernet1
+   description to_RegionA-PE01_GigabitEthernet0/0/0/2
    no switchport
    ip address 172.16.1.2/30
    ipv6 enable
@@ -50,6 +51,7 @@ interface Ethernet1
    ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet2
+   description to_RegionA-PE02_GigabitEthernet0/0/0/2
    no switchport
    ip address 172.16.3.2/30
    ipv6 enable
@@ -57,16 +59,19 @@ interface Ethernet2
    ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet3
+   description to_RegionA-CE02_Ethernet3
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet4
+   description to_RegionA-CE02_Ethernet4
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet5
+   description to_RegionA-Acc01_Ethernet1
    load-interval 30
    speed forced 1000full
    switchport trunk allowed vlan 10,110
@@ -74,6 +79,7 @@ interface Ethernet5
    channel-group 2 mode active
 !
 interface Ethernet6
+   description to_RegionA-Acc01_Ethernet2
    load-interval 30
    speed forced 1000full
    switchport trunk allowed vlan 10,110
@@ -81,6 +87,7 @@ interface Ethernet6
    channel-group 2 mode active
 !
 interface Ethernet7
+   description to_RegionA-Acc01_Ethernet5
    load-interval 30
    speed forced 1000full
    switchport trunk allowed vlan 20,120
@@ -88,6 +95,7 @@ interface Ethernet7
    channel-group 3 mode active
 !
 interface Ethernet8
+   description to_RegionA-Acc01_Ethernet6
    load-interval 30
    speed forced 1000full
    switchport trunk allowed vlan 20,120

@@ -1,5 +1,6 @@
 Physical interface: ge-0/0/0, Enabled, Physical link is Up
   Interface index: 140, SNMP ifIndex: 518
+  Description: to_RegionA-PE02_GigabitEthernet0/0/0/0
   Link-level type: Ethernet, MTU: 1514, MRU: 1522, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None, Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Enabled, Auto-negotiation: Enabled, Remote fault: Online
   Pad to minimum frame size: Disabled
   Device flags   : Present Running
@@ -7,7 +8,7 @@ Physical interface: ge-0/0/0, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:65:ea:02, Hardware address: 52:54:00:65:ea:02
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -24,8 +25,8 @@ Physical interface: ge-0/0/0, Enabled, Physical link is Up
 
   Logical interface ge-0/0/0.0 (Index 332) (SNMP ifIndex 613)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 309967
-    Output packets: 312177
+    Input packets : 330346
+    Output packets: 332861
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
       Flags: Sendbcast-pkt-to-re
@@ -108,6 +109,7 @@ Physical interface: pfh-0/0/0, Enabled, Physical link is Up
 
 Physical interface: ge-0/0/1, Enabled, Physical link is Up
   Interface index: 141, SNMP ifIndex: 519
+  Description: to_RegionB-PE01_ge-0/0/1
   Link-level type: Ethernet, MTU: 1514, MRU: 1522, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None, Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Enabled, Auto-negotiation: Enabled, Remote fault: Online
   Pad to minimum frame size: Disabled
   Device flags   : Present Running
@@ -115,7 +117,7 @@ Physical interface: ge-0/0/1, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:f0:89:03, Hardware address: 52:54:00:f0:89:03
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -132,8 +134,8 @@ Physical interface: ge-0/0/1, Enabled, Physical link is Up
 
   Logical interface ge-0/0/1.0 (Index 333) (SNMP ifIndex 614)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 284267
-    Output packets: 283390
+    Input packets : 302715
+    Output packets: 301688
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
       Flags: Sendbcast-pkt-to-re
@@ -149,6 +151,7 @@ Physical interface: ge-0/0/1, Enabled, Physical link is Up
 
 Physical interface: ge-0/0/2, Enabled, Physical link is Up
   Interface index: 142, SNMP ifIndex: 520
+  Description: to_RegionB-CE01_ge-0/0/1
   Link-level type: Ethernet, MTU: 1514, MRU: 1522, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None, Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Enabled, Auto-negotiation: Enabled, Remote fault: Online
   Pad to minimum frame size: Disabled
   Device flags   : Present Running
@@ -156,9 +159,9 @@ Physical interface: ge-0/0/2, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:4c:37:04, Hardware address: 52:54:00:4c:37:04
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
-  Input rate     : 0 bps (0 pps)
-  Output rate    : 0 bps (0 pps)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
+  Input rate     : 624 bps (0 pps)
+  Output rate    : 1240 bps (0 pps)
   Active alarms  : None
   Active defects : None
   PCS statistics                      Seconds
@@ -173,8 +176,8 @@ Physical interface: ge-0/0/2, Enabled, Physical link is Up
 
   Logical interface ge-0/0/2.0 (Index 334) (SNMP ifIndex 615)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 478973
-    Output packets: 482480
+    Input packets : 509382
+    Output packets: 513101
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
       Flags: Sendbcast-pkt-to-re
@@ -190,6 +193,7 @@ Physical interface: ge-0/0/2, Enabled, Physical link is Up
 
 Physical interface: ge-0/0/3, Enabled, Physical link is Up
   Interface index: 143, SNMP ifIndex: 521
+  Description: to_RegionB-CE02_ge-0/0/1
   Link-level type: Ethernet, MTU: 1514, MRU: 1522, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None, Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Enabled, Auto-negotiation: Enabled, Remote fault: Online
   Pad to minimum frame size: Disabled
   Device flags   : Present Running
@@ -197,7 +201,7 @@ Physical interface: ge-0/0/3, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:1f:11:05, Hardware address: 52:54:00:1f:11:05
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 392 bps (0 pps)
   Active alarms  : None
@@ -214,8 +218,8 @@ Physical interface: ge-0/0/3, Enabled, Physical link is Up
 
   Logical interface ge-0/0/3.0 (Index 335) (SNMP ifIndex 616)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 478003
-    Output packets: 482003
+    Input packets : 508308
+    Output packets: 512505
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
       Flags: Sendbcast-pkt-to-re
@@ -238,7 +242,7 @@ Physical interface: ge-0/0/4, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:e7:53:06, Hardware address: 52:54:00:e7:53:06
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -262,7 +266,7 @@ Physical interface: ge-0/0/5, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:97:1f:07, Hardware address: 52:54:00:97:1f:07
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -286,7 +290,7 @@ Physical interface: ge-0/0/6, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:aa:43:08, Hardware address: 52:54:00:aa:43:08
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -310,7 +314,7 @@ Physical interface: ge-0/0/7, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:c7:dc:09, Hardware address: 52:54:00:c7:dc:09
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -334,7 +338,7 @@ Physical interface: ge-0/0/8, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:b0:4b:0a, Hardware address: 52:54:00:b0:4b:0a
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -358,7 +362,7 @@ Physical interface: ge-0/0/9, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:54:44:0b, Hardware address: 52:54:00:54:44:0b
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -382,7 +386,7 @@ Physical interface: ge-0/0/10, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:87:62:0c, Hardware address: 52:54:00:87:62:0c
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -406,7 +410,7 @@ Physical interface: ge-0/0/11, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:49:61:0d, Hardware address: 52:54:00:49:61:0d
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -430,7 +434,7 @@ Physical interface: ge-0/0/12, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:97:d0:0e, Hardware address: 52:54:00:97:d0:0e
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -454,7 +458,7 @@ Physical interface: ge-0/0/13, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:a8:28:0f, Hardware address: 52:54:00:a8:28:0f
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -478,7 +482,7 @@ Physical interface: ge-0/0/14, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d0:e3:10, Hardware address: 52:54:00:d0:e3:10
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -502,7 +506,7 @@ Physical interface: ge-0/0/15, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:57:22:11, Hardware address: 52:54:00:57:22:11
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -526,7 +530,7 @@ Physical interface: ge-0/0/16, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:bd:f4:12, Hardware address: 52:54:00:bd:f4:12
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -550,7 +554,7 @@ Physical interface: ge-0/0/17, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:f3:6e:13, Hardware address: 52:54:00:f3:6e:13
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -574,7 +578,7 @@ Physical interface: ge-0/0/18, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:7a:73:14, Hardware address: 52:54:00:7a:73:14
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -598,7 +602,7 @@ Physical interface: ge-0/0/19, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d5:26:15, Hardware address: 52:54:00:d5:26:15
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -622,7 +626,7 @@ Physical interface: ge-0/0/20, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:87:ca:16, Hardware address: 52:54:00:87:ca:16
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -646,7 +650,7 @@ Physical interface: ge-0/0/21, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:29:cd:17, Hardware address: 52:54:00:29:cd:17
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -670,7 +674,7 @@ Physical interface: ge-0/0/22, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:57:c2:18, Hardware address: 52:54:00:57:c2:18
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -694,7 +698,7 @@ Physical interface: ge-0/0/23, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:b4:70:19, Hardware address: 52:54:00:b4:70:19
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -718,7 +722,7 @@ Physical interface: ge-0/0/24, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:71:5b:1a, Hardware address: 52:54:00:71:5b:1a
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -742,7 +746,7 @@ Physical interface: ge-0/0/25, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:5b:d9:1b, Hardware address: 52:54:00:5b:d9:1b
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -766,7 +770,7 @@ Physical interface: ge-0/0/26, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:74:d7:1c, Hardware address: 52:54:00:74:d7:1c
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -790,7 +794,7 @@ Physical interface: ge-0/0/27, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:da:d7:1d, Hardware address: 52:54:00:da:d7:1d
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -814,7 +818,7 @@ Physical interface: ge-0/0/28, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:7a:de:1e, Hardware address: 52:54:00:7a:de:1e
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -838,7 +842,7 @@ Physical interface: ge-0/0/29, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:4b:f2:1f, Hardware address: 52:54:00:4b:f2:1f
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -862,7 +866,7 @@ Physical interface: ge-0/0/30, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d4:65:20, Hardware address: 52:54:00:d4:65:20
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -886,7 +890,7 @@ Physical interface: ge-0/0/31, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d9:00:21, Hardware address: 52:54:00:d9:00:21
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -910,7 +914,7 @@ Physical interface: ge-0/0/32, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:88:70:22, Hardware address: 52:54:00:88:70:22
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -934,7 +938,7 @@ Physical interface: ge-0/0/33, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:34:be:23, Hardware address: 52:54:00:34:be:23
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -958,7 +962,7 @@ Physical interface: ge-0/0/34, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:80:6b:24, Hardware address: 52:54:00:80:6b:24
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -982,7 +986,7 @@ Physical interface: ge-0/0/35, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:01:12:25, Hardware address: 52:54:00:01:12:25
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1006,7 +1010,7 @@ Physical interface: ge-0/0/36, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:7a:39:26, Hardware address: 52:54:00:7a:39:26
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1030,7 +1034,7 @@ Physical interface: ge-0/0/37, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:de:1e:27, Hardware address: 52:54:00:de:1e:27
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1054,7 +1058,7 @@ Physical interface: ge-0/0/38, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:4a:31:28, Hardware address: 52:54:00:4a:31:28
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1078,7 +1082,7 @@ Physical interface: ge-0/0/39, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:21:95:29, Hardware address: 52:54:00:21:95:29
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1102,7 +1106,7 @@ Physical interface: ge-0/0/40, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:c2:4a:2a, Hardware address: 52:54:00:c2:4a:2a
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1126,7 +1130,7 @@ Physical interface: ge-0/0/41, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:0f:99:2b, Hardware address: 52:54:00:0f:99:2b
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1150,7 +1154,7 @@ Physical interface: ge-0/0/42, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:ec:e8:2c, Hardware address: 52:54:00:ec:e8:2c
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1174,7 +1178,7 @@ Physical interface: ge-0/0/43, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:df:a5:2d, Hardware address: 52:54:00:df:a5:2d
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1198,7 +1202,7 @@ Physical interface: ge-0/0/44, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:09:a3:2e, Hardware address: 52:54:00:09:a3:2e
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1222,7 +1226,7 @@ Physical interface: ge-0/0/45, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:2c:2d:2f, Hardware address: 52:54:00:2c:2d:2f
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1246,7 +1250,7 @@ Physical interface: ge-0/0/46, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:b9:03:30, Hardware address: 52:54:00:b9:03:30
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1270,7 +1274,7 @@ Physical interface: ge-0/0/47, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:86:8d:31, Hardware address: 52:54:00:86:8d:31
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1294,7 +1298,7 @@ Physical interface: ge-0/0/48, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:5a:93:32, Hardware address: 52:54:00:5a:93:32
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1318,7 +1322,7 @@ Physical interface: ge-0/0/49, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:f2:13:33, Hardware address: 52:54:00:f2:13:33
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1342,7 +1346,7 @@ Physical interface: ge-0/0/50, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:70:77:34, Hardware address: 52:54:00:70:77:34
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1366,7 +1370,7 @@ Physical interface: ge-0/0/51, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:50:af:35, Hardware address: 52:54:00:50:af:35
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1390,7 +1394,7 @@ Physical interface: ge-0/0/52, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:ef:15:36, Hardware address: 52:54:00:ef:15:36
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1414,7 +1418,7 @@ Physical interface: ge-0/0/53, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:f5:c0:37, Hardware address: 52:54:00:f5:c0:37
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1438,7 +1442,7 @@ Physical interface: ge-0/0/54, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:71:6e:38, Hardware address: 52:54:00:71:6e:38
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1462,7 +1466,7 @@ Physical interface: ge-0/0/55, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:cf:19:39, Hardware address: 52:54:00:cf:19:39
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1486,7 +1490,7 @@ Physical interface: ge-0/0/56, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:5a:8f:3a, Hardware address: 52:54:00:5a:8f:3a
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1510,7 +1514,7 @@ Physical interface: ge-0/0/57, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:c8:04:3b, Hardware address: 52:54:00:c8:04:3b
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1534,7 +1538,7 @@ Physical interface: ge-0/0/58, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:e1:4b:3c, Hardware address: 52:54:00:e1:4b:3c
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1558,7 +1562,7 @@ Physical interface: ge-0/0/59, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:27:fb:3d, Hardware address: 52:54:00:27:fb:3d
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1582,7 +1586,7 @@ Physical interface: ge-0/0/60, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:06:aa:3e, Hardware address: 52:54:00:06:aa:3e
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1606,7 +1610,7 @@ Physical interface: ge-0/0/61, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:a0:35:3f, Hardware address: 52:54:00:a0:35:3f
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1630,7 +1634,7 @@ Physical interface: ge-0/0/62, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:90:eb:40, Hardware address: 52:54:00:90:eb:40
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1654,7 +1658,7 @@ Physical interface: ge-0/0/63, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:43:27:41, Hardware address: 52:54:00:43:27:41
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1678,7 +1682,7 @@ Physical interface: ge-0/0/64, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d4:19:42, Hardware address: 52:54:00:d4:19:42
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1702,7 +1706,7 @@ Physical interface: ge-0/0/65, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:a6:22:43, Hardware address: 52:54:00:a6:22:43
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1726,7 +1730,7 @@ Physical interface: ge-0/0/66, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:3c:65:44, Hardware address: 52:54:00:3c:65:44
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1750,7 +1754,7 @@ Physical interface: ge-0/0/67, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:33:4f:45, Hardware address: 52:54:00:33:4f:45
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1774,7 +1778,7 @@ Physical interface: ge-0/0/68, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:53:c6:46, Hardware address: 52:54:00:53:c6:46
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1798,7 +1802,7 @@ Physical interface: ge-0/0/69, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:73:90:47, Hardware address: 52:54:00:73:90:47
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1822,7 +1826,7 @@ Physical interface: ge-0/0/70, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d1:4e:48, Hardware address: 52:54:00:d1:4e:48
-  Last flapped   : 2021-11-22 12:45:52 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:52 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1846,7 +1850,7 @@ Physical interface: ge-0/0/71, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:2d:c6:49, Hardware address: 52:54:00:2d:c6:49
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1870,7 +1874,7 @@ Physical interface: ge-0/0/72, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:e7:ca:4a, Hardware address: 52:54:00:e7:ca:4a
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1894,7 +1898,7 @@ Physical interface: ge-0/0/73, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:35:c2:4b, Hardware address: 52:54:00:35:c2:4b
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1918,7 +1922,7 @@ Physical interface: ge-0/0/74, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:bc:3a:4c, Hardware address: 52:54:00:bc:3a:4c
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1942,7 +1946,7 @@ Physical interface: ge-0/0/75, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:9c:df:4d, Hardware address: 52:54:00:9c:df:4d
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1966,7 +1970,7 @@ Physical interface: ge-0/0/76, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:46:a0:4e, Hardware address: 52:54:00:46:a0:4e
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -1990,7 +1994,7 @@ Physical interface: ge-0/0/77, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:80:1f:4f, Hardware address: 52:54:00:80:1f:4f
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2014,7 +2018,7 @@ Physical interface: ge-0/0/78, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:33:ba:50, Hardware address: 52:54:00:33:ba:50
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2038,7 +2042,7 @@ Physical interface: ge-0/0/79, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:77:f7:51, Hardware address: 52:54:00:77:f7:51
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2062,7 +2066,7 @@ Physical interface: ge-0/0/80, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:dc:48:52, Hardware address: 52:54:00:dc:48:52
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2086,7 +2090,7 @@ Physical interface: ge-0/0/81, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:f9:bf:53, Hardware address: 52:54:00:f9:bf:53
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2110,7 +2114,7 @@ Physical interface: ge-0/0/82, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:d0:38:54, Hardware address: 52:54:00:d0:38:54
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2134,7 +2138,7 @@ Physical interface: ge-0/0/83, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:a0:53:55, Hardware address: 52:54:00:a0:53:55
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2158,7 +2162,7 @@ Physical interface: ge-0/0/84, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:0e:25:56, Hardware address: 52:54:00:0e:25:56
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2182,7 +2186,7 @@ Physical interface: ge-0/0/85, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:c1:6e:57, Hardware address: 52:54:00:c1:6e:57
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2206,7 +2210,7 @@ Physical interface: ge-0/0/86, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:51:23:58, Hardware address: 52:54:00:51:23:58
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2230,7 +2234,7 @@ Physical interface: ge-0/0/87, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:8d:54:59, Hardware address: 52:54:00:8d:54:59
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2254,7 +2258,7 @@ Physical interface: ge-0/0/88, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:57:5c:5a, Hardware address: 52:54:00:57:5c:5a
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2278,7 +2282,7 @@ Physical interface: ge-0/0/89, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:88:b1:5b, Hardware address: 52:54:00:88:b1:5b
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2302,7 +2306,7 @@ Physical interface: ge-0/0/90, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:c7:a2:5c, Hardware address: 52:54:00:c7:a2:5c
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2326,7 +2330,7 @@ Physical interface: ge-0/0/91, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:f8:37:5d, Hardware address: 52:54:00:f8:37:5d
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2350,7 +2354,7 @@ Physical interface: ge-0/0/92, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:8e:35:5e, Hardware address: 52:54:00:8e:35:5e
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2374,7 +2378,7 @@ Physical interface: ge-0/0/93, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:1b:f7:5f, Hardware address: 52:54:00:1b:f7:5f
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2398,7 +2402,7 @@ Physical interface: ge-0/0/94, Enabled, Physical link is Up
   Link flags     : None
   CoS queues     : 8 supported, 8 maximum usable queues
   Current address: 52:54:00:2c:68:60, Hardware address: 52:54:00:2c:68:60
-  Last flapped   : 2021-11-22 12:45:53 UTC (3w0d 14:15 ago)
+  Last flapped   : 2021-11-22 12:45:53 UTC (3w1d 20:15 ago)
   Input rate     : 0 bps (0 pps)
   Output rate    : 0 bps (0 pps)
   Active alarms  : None
@@ -2453,14 +2457,14 @@ Physical interface: em1, Enabled, Physical link is Up
   Interface flags: SNMP-Traps
   Link type      : Full-Duplex
   Current address: 52:54:00:7d:aa:01, Hardware address: 52:54:00:7d:aa:01
-  Last flapped   : 2021-11-22 12:44:41 UTC (3w0d 14:17 ago)
-    Input packets : 43317003
-    Output packets: 43615596
+  Last flapped   : 2021-11-22 12:44:41 UTC (3w1d 20:16 ago)
+    Input packets : 45830683
+    Output packets: 46146449
 
   Logical interface em1.0 (Index 3) (SNMP ifIndex 24)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 43317364
-    Output packets: 43615967
+    Input packets : 45830634
+    Output packets: 46146502
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
       Flags: Is-Primary
@@ -2500,14 +2504,14 @@ Physical interface: fxp0, Enabled, Physical link is Up
   Interface flags: SNMP-Traps
   Link type      : Full-Duplex
   Current address: 52:54:00:e2:72:00, Hardware address: 52:54:00:e2:72:00
-  Last flapped   : 2021-11-22 12:44:48 UTC (3w0d 14:17 ago)
-    Input packets : 861695
-    Output packets: 864902
+  Last flapped   : 2021-11-22 12:44:48 UTC (3w1d 20:16 ago)
+    Input packets : 896547
+    Output packets: 903175
 
   Logical interface fxp0.0 (Index 4) (SNMP ifIndex 13)
     Flags: Up SNMP-Traps 0x4004000 Encapsulation: ENET2
-    Input packets : 861694
-    Output packets: 864902
+    Input packets : 896546
+    Output packets: 903175
     Protocol inet, MTU: 1500
     Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
       Flags: Sendbcast-pkt-to-re, Is-Primary
@@ -2572,8 +2576,8 @@ Physical interface: lo0, Enabled, Physical link is Up
   Interface flags: SNMP-Traps
   Link flags     : None
   Last flapped   : Never
-    Input packets : 2239577
-    Output packets: 2239577
+    Input packets : 2369189
+    Output packets: 2369189
 
   Logical interface lo0.16384 (Index 321) (SNMP ifIndex 21)
     Flags: SNMP-Traps Encapsulation: Unspecified
@@ -2586,8 +2590,8 @@ Physical interface: lo0, Enabled, Physical link is Up
 
   Logical interface lo0.16385 (Index 320) (SNMP ifIndex 22)
     Flags: SNMP-Traps Encapsulation: Unspecified
-    Input packets : 2239577
-    Output packets: 2239577
+    Input packets : 2369189
+    Output packets: 2369189
     Protocol inet, MTU: Unlimited
     Max nh cache: 0, New hold nh limit: 0, Curr nh cnt: 0, Curr new hold cnt: 0, NH drop cnt: 0
 

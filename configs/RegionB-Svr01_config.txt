@@ -20,11 +20,13 @@ management api http-commands
    no shutdown
 !
 interface Ethernet1
+   description to_RegionB-Acc01_Ethernet5
    no switchport
    ip address 172.31.10.100/24
    ipv6 address fc00:172:31:10::100/64
 !
 interface Ethernet2
+   description to_RegionB-Acc01_Ethernet6
    no switchport
    ip address 172.31.110.100/24
    ipv6 address fc00:172:31:110::100/64

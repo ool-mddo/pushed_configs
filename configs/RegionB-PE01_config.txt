@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2021-12-06 22:04:57 UTC by vrnetlab
+## Last commit: 2021-12-14 03:51:12 UTC by vrnetlab
 version 18.1R1.9;
 system {
     host-name RegionB-PE01;
@@ -43,6 +43,7 @@ chassis {
 }
 interfaces {
     ge-0/0/0 {
+        description to_RegionA-PE01_GigabitEthernet0/0/0/0;
         unit 0 {
             family inet {
                 address 10.1.0.2/30;
@@ -53,6 +54,7 @@ interfaces {
         }
     }
     ge-0/0/1 {
+        description to_RegionB-PE02_ge-0/0/1;
         unit 0 {
             family inet {
                 address 172.17.0.1/30;
@@ -63,6 +65,7 @@ interfaces {
         }
     }
     ge-0/0/2 {
+        description to_RegionB-CE01_ge-0/0/0;
         unit 0 {
             family inet {
                 address 172.17.1.1/30;
@@ -73,6 +76,7 @@ interfaces {
         }
     }
     ge-0/0/3 {
+        description to_RegionB-CE02_ge-0/0/0;
         unit 0 {
             family inet {
                 address 172.17.2.1/30;
