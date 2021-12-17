@@ -45,12 +45,12 @@ MgmtEth0/0/CPU0/0 is up, line protocol is up
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     131418 packets input, 12347765 bytes, 0 total input drops
+     131723 packets input, 12370901 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 0 broadcast packets, 5350 multicast packets
+     Received 0 broadcast packets, 5379 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     105054 packets output, 54770351 bytes, 0 total output drops
+     105313 packets output, 55005849 bytes, 0 total output drops
      Output 2 broadcast packets, 0 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
@@ -70,17 +70,17 @@ GigabitEthernet0/0/0/0 is up, line protocol is up
   loopback not set,
   Last link flapped 3w3d
   ARP type ARPA, ARP timeout 04:00:00
-  Last input 00:00:05, output 00:00:05
+  Last input 00:00:00, output 00:00:00
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     363864 packets input, 34743159 bytes, 0 total input drops
+     365921 packets input, 34993978 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 1776 broadcast packets, 32168 multicast packets
+     Received 1785 broadcast packets, 32557 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     360904 packets output, 30962455 bytes, 0 total output drops
-     Output 16 broadcast packets, 29808 multicast packets
+     362928 packets output, 31169555 bytes, 0 total output drops
+     Output 16 broadcast packets, 30169 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
@@ -108,8 +108,8 @@ GigabitEthernet0/0/0/1 is up, line protocol is up
      Received 0 broadcast packets, 0 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     665777 packets output, 38041608 bytes, 0 total output drops
-     Output 527042 broadcast packets, 138735 multicast packets
+     669343 packets output, 38288976 bytes, 0 total output drops
+     Output 529699 broadcast packets, 139644 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
@@ -128,17 +128,17 @@ GigabitEthernet0/0/0/2 is up, line protocol is up
   loopback not set,
   Last link flapped 3w3d
   ARP type ARPA, ARP timeout 04:00:00
-  Last input 00:00:00, output 00:00:00
+  Last input 00:00:00, output 00:00:02
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     544926 packets input, 55302597 bytes, 0 total input drops
+     547672 packets input, 55594104 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 1 broadcast packets, 532778 multicast packets
+     Received 1 broadcast packets, 535463 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     517740 packets output, 53108238 bytes, 0 total output drops
-     Output 1 broadcast packets, 505588 multicast packets
+     520556 packets output, 53427397 bytes, 0 total output drops
+     Output 1 broadcast packets, 508343 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
@@ -157,17 +157,17 @@ GigabitEthernet0/0/0/3 is up, line protocol is up
   loopback not set,
   Last link flapped 3w3d
   ARP type ARPA, ARP timeout 04:00:00
-  Last input 00:00:00, output 00:00:00
+  Last input 00:00:00, output 00:00:02
   Last clearing of "show interface" counters never
   5 minute input rate 0 bits/sec, 0 packets/sec
   5 minute output rate 0 bits/sec, 0 packets/sec
-     544908 packets input, 55306967 bytes, 0 total input drops
+     547657 packets input, 55598924 bytes, 0 total input drops
      0 drops for unrecognized upper-level protocol
-     Received 0 broadcast packets, 532768 multicast packets
+     Received 0 broadcast packets, 535456 multicast packets
               0 runts, 0 giants, 0 throttles, 0 parity
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
-     517625 packets output, 53228517 bytes, 0 total output drops
-     Output 2 broadcast packets, 505479 multicast packets
+     520443 packets output, 53548412 bytes, 0 total output drops
+     Output 2 broadcast packets, 508236 multicast packets
      0 output errors, 0 underruns, 0 applique, 0 resets
      0 output buffer failures, 0 output buffers swapped out
      1 carrier transitions
