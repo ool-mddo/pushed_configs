@@ -25,3 +25,24 @@ jobs:
     - name: prepare batfish
       run: docker-compose up -d
       working-directory: ./L1_topo
+
+    - name: install dependencies
+      run: pip3 -r requirements.txt
+      working-directory: ./L1_topo
+
+    - name: wait NetBox
+      run: bash wait_service.sh
+      working-directory: ./L1_topo
+
+    - name: parse description
+      run: docker-compose exec -T batfish python3 /mnt/description2netbox.py http://host.docker.internal:8000 0123456789abcdef0123456789abcdef01234567
+      working-directory: ./L1_topo
+
+    - name: extract L1 topo as inet-henge format
+      run: python3 netbox2inet-henge.py http://localhost:8000 0123456789abcdef0123456789abcdef01234567 1 > ../inet-henge/netbox.json
+      working-directory: ./L1_topo
+
+    - name: convert 
+      run: python3 inet-henge2batfish.py inet-henge-topo.json > layer1_topology.json
+      working-directory: ./L1_topo
+
