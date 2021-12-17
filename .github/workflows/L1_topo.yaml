@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+    - feature/extract-L1-topo
+jobs:
+  extract-L1-topo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v2
+    - name: prepare batfish
+      run: docker-compose up -d
+      working-directory: ./L1_topo
