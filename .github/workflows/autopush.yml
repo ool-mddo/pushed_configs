@@ -2,7 +2,7 @@ name: config-push
 
 on:
   schedule:
-    - cron: '41 13 * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   config-push:
