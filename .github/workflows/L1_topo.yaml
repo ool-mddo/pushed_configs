@@ -1,7 +1,8 @@
 on:
   push:
-    branches:
-    - feature/extract-L1-topo
+    paths:
+    - "mddo_network/configs/**"
+
 defaults:
   run:
       working-directory: ./L1_topo
