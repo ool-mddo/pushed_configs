@@ -15,7 +15,7 @@ jobs:
           ansible-runner run . -p playbooks/get_config_runner.yml --container-option="--net=my-multihost-network"
           cp ~mddo/builder/project/configs/* /tmp/configs/mddo_network/configs/
           ansible-runner run . -p playbooks/get_status_runner.yml --container-option="--net=my-multihost-network"
-          cp ~mddo/builder/project/status/* /tmp/configs/mddo_network/status/
+          cp -r ~mddo/builder/project/status/ /tmp/configs/mddo_network/status/
 
       - name: checkout
         uses: actions/checkout@v2
