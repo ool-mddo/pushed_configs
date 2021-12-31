@@ -8,19 +8,19 @@ Ethernet1 is up, line protocol is up (connected)
     fc00:172:30:10::100, subnet is fc00:172:30:10::/64
   IP MTU 1500 bytes (default), BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
   5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
   5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
-     13782649 packets input, 1053885861 bytes
-     Received 82111 broadcasts, 13697201 multicast
+     13843864 packets input, 1058571049 bytes
+     Received 82475 broadcasts, 13758038 multicast
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     98960 packets output, 17553622 bytes
-     Sent 25 broadcasts, 96256 multicast
+     99398 packets output, 17635782 bytes
+     Sent 25 broadcasts, 96684 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -34,19 +34,19 @@ Ethernet2 is up, line protocol is up (connected)
     fc00:172:30:110::100, subnet is fc00:172:30:110::/64
   IP MTU 1500 bytes (default), BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
   5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
   5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
-     11163828 packets input, 798341470 bytes
-     Received 82111 broadcasts, 11080339 multicast
+     11213414 packets input, 801891840 bytes
+     Received 82475 broadcasts, 11129556 multicast
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     97302 packets output, 17493432 bytes
-     Sent 0 broadcasts, 96249 multicast
+     97733 packets output, 17575427 bytes
+     Sent 0 broadcasts, 96676 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -54,7 +54,7 @@ Ethernet3 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.001a.7e04 (bia 5254.001a.7e04)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -65,8 +65,8 @@ Ethernet3 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165557330 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166292984 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -74,7 +74,7 @@ Ethernet4 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.0094.1305 (bia 5254.0094.1305)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -85,8 +85,8 @@ Ethernet4 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165557453 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166293107 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -94,7 +94,7 @@ Ethernet5 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.002a.3306 (bia 5254.002a.3306)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -105,8 +105,8 @@ Ethernet5 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165557330 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166292984 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -114,7 +114,7 @@ Ethernet6 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00d4.ff07 (bia 5254.00d4.ff07)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -125,8 +125,8 @@ Ethernet6 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165557330 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166292984 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -134,7 +134,7 @@ Ethernet7 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.0072.7a08 (bia 5254.0072.7a08)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -145,8 +145,8 @@ Ethernet7 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165557453 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166293107 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -154,7 +154,7 @@ Ethernet8 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00dc.d409 (bia 5254.00dc.d409)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 15 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -165,8 +165,8 @@ Ethernet8 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165557453 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166293107 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -174,7 +174,7 @@ Ethernet9 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.003f.660a (bia 5254.003f.660a)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -185,8 +185,8 @@ Ethernet9 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165557453 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166293107 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -194,7 +194,7 @@ Ethernet10 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.0041.d70b (bia 5254.0041.d70b)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -205,8 +205,8 @@ Ethernet10 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165639452 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166375470 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -214,7 +214,7 @@ Ethernet11 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00b9.660c (bia 5254.00b9.660c)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -225,8 +225,8 @@ Ethernet11 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165639452 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166375470 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -234,7 +234,7 @@ Ethernet12 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.0053.b40d (bia 5254.0053.b40d)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -245,8 +245,8 @@ Ethernet12 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165639575 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166375593 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -254,7 +254,7 @@ Ethernet13 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.007b.080e (bia 5254.007b.080e)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -265,8 +265,8 @@ Ethernet13 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165639452 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166375470 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -274,7 +274,7 @@ Ethernet14 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00ee.db0f (bia 5254.00ee.db0f)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -285,8 +285,8 @@ Ethernet14 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165639452 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166375470 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -294,7 +294,7 @@ Ethernet15 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.003b.ee10 (bia 5254.003b.ee10)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -305,8 +305,8 @@ Ethernet15 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165639575 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166375593 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -314,7 +314,7 @@ Ethernet16 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.0037.de11 (bia 5254.0037.de11)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -325,8 +325,8 @@ Ethernet16 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165639575 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166375593 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -334,7 +334,7 @@ Ethernet17 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00a6.a312 (bia 5254.00a6.a312)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -345,8 +345,8 @@ Ethernet17 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165639575 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166375593 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -354,7 +354,7 @@ Ethernet18 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00fe.c513 (bia 5254.00fe.c513)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -365,8 +365,8 @@ Ethernet18 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311945 packets output, 165639575 bytes
-     Sent 0 broadcasts, 1311945 multicast
+     1317775 packets output, 166375593 bytes
+     Sent 0 broadcasts, 1317775 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -374,7 +374,7 @@ Ethernet19 is up, line protocol is up (connected)
   Hardware is Ethernet, address is 5254.00cb.2614 (bia 5254.00cb.2614)
   Ethernet MTU 9214 bytes, BW 10000000 kbit
   Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
-  Up 28 days, 12 hours, 19 minutes, 54 seconds
+  Up 28 days, 15 hours, 22 minutes, 14 seconds
   Loopback Mode : None
   2 link status changes since last clear
   Last clearing of "show interface" counters never
@@ -385,8 +385,8 @@ Ethernet19 is up, line protocol is up (connected)
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     1311944 packets output, 165639452 bytes
-     Sent 0 broadcasts, 1311944 multicast
+     1317774 packets output, 166375470 bytes
+     Sent 0 broadcasts, 1317774 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
@@ -400,19 +400,19 @@ Management1 is up, line protocol is up (connected)
     fec0::5054:ff:fe5e:6100, subnet is fec0::/64
   IP MTU 1500 bytes (default), BW 1000000 kbit
   Full-duplex, 1Gb/s, auto negotiation: on, uni-link: n/a
-  Up 28 days, 12 hours, 18 minutes, 35 seconds
+  Up 28 days, 15 hours, 20 minutes, 55 seconds
   Loopback Mode : None
   6 link status changes since last clear
   Last clearing of "show interface" counters never
-  5 minutes input rate 294 bps (0.0% with framing overhead), 0 packets/sec
-  5 minutes output rate 465 bps (0.0% with framing overhead), 0 packets/sec
-     82186 packets input, 6715400 bytes
+  5 minutes input rate 306 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 476 bps (0.0% with framing overhead), 0 packets/sec
+     82569 packets input, 6746506 bytes
      Received 0 broadcasts, 0 multicast
      0 runts, 0 giants
      0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
      0 PAUSE input
-     237000 packets output, 26381331 bytes
-     Sent 6 broadcasts, 82135 multicast
+     238064 packets output, 26502757 bytes
+     Sent 6 broadcasts, 82499 multicast
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 0 output discards
      0 PAUSE output
