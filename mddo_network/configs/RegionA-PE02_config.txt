@@ -20,12 +20,12 @@ interface GigabitEthernet0/0/0/1
  ipv6 address fc00:172:16::2/64
 !
 interface GigabitEthernet0/0/0/2
- description to_RegionA-CE01_Ethernet2
+ description to_RegionA-CE01_ge-0/0/1
  ipv4 address 172.16.3.1 255.255.255.252
  ipv6 address fc00:172:16:3::1/64
 !
 interface GigabitEthernet0/0/0/3
- description to_RegionA-CE02_Ethernet2
+ description to_RegionA-CE02_ge-0/0/1
  ipv4 address 172.16.4.1 255.255.255.252
  ipv6 address fc00:172:16:4::1/64
 !

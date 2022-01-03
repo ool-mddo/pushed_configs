@@ -46,49 +46,49 @@ interface Port-Channel4
    port-channel min-links 1
 !
 interface Ethernet1
-   description to_RegionA-CE01_Ethernet5
+   description to_RegionA-CE01_ge-0/0/4
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet2
-   description to_RegionA-CE01_Ethernet6
+   description to_RegionA-CE01_ge-0/0/5
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet3
-   description to_RegionA-CE02_Ethernet5
+   description to_RegionA-CE02_ge-0/0/4
    load-interval 30
    speed forced 1000full
    channel-group 2 mode active
 !
 interface Ethernet4
-   description to_RegionA-CE02_Ethernet6
+   description to_RegionA-CE02_ge-0/0/5
    load-interval 30
    speed forced 1000full
    channel-group 2 mode active
 !
 interface Ethernet5
-   description to_RegionA-CE01_Ethernet7
+   description to_RegionA-CE01_ge-0/0/6
    load-interval 30
    speed forced 1000full
    channel-group 3 mode active
 !
 interface Ethernet6
-   description to_RegionA-CE01_Ethernet8
+   description to_RegionA-CE01_ge-0/0/7
    load-interval 30
    speed forced 1000full
    channel-group 3 mode active
 !
 interface Ethernet7
-   description to_RegionA-CE02_Ethernet7
+   description to_RegionA-CE02_ge-0/0/6
    load-interval 30
    speed forced 1000full
    channel-group 4 mode active
 !
 interface Ethernet8
-   description to_RegionA-CE02_Ethernet8
+   description to_RegionA-CE02_ge-0/0/7
    load-interval 30
    speed forced 1000full
    channel-group 4 mode active
