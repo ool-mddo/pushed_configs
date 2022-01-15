@@ -26,6 +26,6 @@ jobs:
         run: |
           cd /tmp/configs
           git add .
-          git commit -m "Applu config changes"
+          git commit -m "Apply config changes"
           git push origin main
 
