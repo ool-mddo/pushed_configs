@@ -1,4 +1,4 @@
-show configuration 
+show configuration
 ## Last commit: 2021-12-14 03:51:20 UTC by vrnetlab
 version 18.1R1.9;
 system {
@@ -62,7 +62,7 @@ interfaces {
         description to_RegionA-PE02_GigabitEthernet0/0/0/3;
         unit 0 {
             family inet {
-                address 172.17.4.2/30;
+                address 172.16.4.2/30;
             }
             family inet6 {
                 address fc00:172:17:4::2/64;
