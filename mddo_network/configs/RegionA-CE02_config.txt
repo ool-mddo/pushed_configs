@@ -197,8 +197,8 @@ interfaces {
                 active;
             }
         }
-        unit 120 {
-            vlan-id 120;
+        unit 20 {
+            vlan-id 20;
             family inet {
                 address 172.30.20.2/24 {
                     vrrp-group 3 {
