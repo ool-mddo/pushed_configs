@@ -19,6 +19,8 @@ jobs:
           cd ~mddo/builder
           ansible-runner run . -p playbooks/get_config_runner.yml --container-option="--net=my-multihost-network"
           cp ./project/configs/* /tmp/configs/mddo_network/configs/
+          cp ./project/hosts/* /tmp/configs/mddo_network/hosts/
+
           ansible-runner run . -p playbooks/get_status_runner.yml --container-option="--net=my-multihost-network"
           cp -r ./project/status/ /tmp/configs/mddo_network/
 
