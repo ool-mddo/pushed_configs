@@ -48,7 +48,12 @@ jobs:
     - name: convert format inet-henge to batfish
       run: python3 inet-henge2batfish.py ../inet-henge/netbox.json > ../mddo_network/layer1_topology.json
 
+    - name: Count file changes
+      id: changes
+      run: echo "::set-output name=count::$(git diff --name-only | wc -l)"
+
     - name: commit files
+      if: steps.changes.outputs.count > 0
       run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"

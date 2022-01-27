@@ -18,18 +18,16 @@ jobs:
         run: |
           cd ~mddo/builder
           ansible-runner run . -p playbooks/get_config_runner.yml --container-option="--net=my-multihost-network"
-          cp ~mddo/builder/project/configs/* /tmp/configs/mddo_network/configs/
-          cp ~mddo/builder/project/hosts/* /tmp/configs/mddo_network/hosts/
-          ansible-runner run . -p playbooks/get_status_runner.yml --container-option="--net=my-multihost-network"
-          cp -r ~mddo/builder/project/status/ /tmp/configs/mddo_network/
+          cp ./project/configs/* /tmp/configs/mddo_network/configs/
+          cp ./project/hosts/* /tmp/configs/mddo_network/hosts/
 
-      - name: Apply config changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Apply config changes
-          repository: /tmp/configs/
-          branch: main
-          commit_user_name: GitHub Actions Bot
-          commit_user_email: my-github-actions-bot@example.org
-          commit_author: Author <actions@github.com>
+          ansible-runner run . -p playbooks/get_status_runner.yml --container-option="--net=my-multihost-network"
+          cp -r ./project/status/ /tmp/configs/mddo_network/
+
+      - name: Commit config changes
+        run: |
+          cd /tmp/configs
+          git add .
+          git commit -m "Apply config changes"
+          git push origin main
 
