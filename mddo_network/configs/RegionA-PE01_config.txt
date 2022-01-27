@@ -1,6 +1,6 @@
 Building configuration...
 !! IOS XR Configuration 5.3.2
-!! Last configuration change at Tue Dec 14 03:57:09 2021 by vrnetlab
+!! Last configuration change at Thu Jan 27 08:38:22 2022 by vrnetlab
 !
 hostname RegionA-PE01
 interface Loopback0
@@ -20,12 +20,12 @@ interface GigabitEthernet0/0/0/1
  ipv6 address fc00:172:16::1/64
 !
 interface GigabitEthernet0/0/0/2
- description to_RegionA-CE01_Ethernet1
+ description to_RegionA-CE01_ge-0/0/0
  ipv4 address 172.16.1.1 255.255.255.252
  ipv6 address fc00:172:16:1::1/64
 !
 interface GigabitEthernet0/0/0/3
- description to_RegionA-CE02_Ethernet1
+ description to_RegionA-CE02_ge-0/0/0
  ipv4 address 172.16.2.1 255.255.255.252
  ipv6 address fc00:172:16:2::1/64
 !
