@@ -58,11 +58,11 @@ interface Ethernet4
    channel-group 2 mode active
 !
 interface Ethernet5
-   description to_RegionB-Svr01_Ethernet1
+   description to_RegionB-Svr01_enp1s4
    switchport access vlan 1010
 !
 interface Ethernet6
-   description to_RegionB-Svr01_Ethernet2
+   description to_RegionB-Svr01_enp1s5
    switchport access vlan 1110
 !
 interface Ethernet7
