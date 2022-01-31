@@ -43,7 +43,7 @@ interface Port-Channel3
    port-channel min-links 1
 !
 interface Ethernet1
-   description to_RegionA-PE01_GigabitEthernet0/0/0/2
+   description to_RegionA-PE01_ge-0/0/2
    no switchport
    ip address 172.16.1.2/30
    ipv6 enable
@@ -51,7 +51,7 @@ interface Ethernet1
    ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet2
-   description to_RegionA-PE02_GigabitEthernet0/0/0/2
+   description to_RegionA-PE02_ge-0/0/2
    no switchport
    ip address 172.16.3.2/30
    ipv6 enable
