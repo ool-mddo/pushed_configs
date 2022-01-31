@@ -100,7 +100,7 @@
         "interface": {
           "source": "Ethernet1",
           "source_lag": null,
-          "target": "ge-0/0/4",
+          "target": "Ethernet5",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -115,7 +115,7 @@
         "interface": {
           "source": "Ethernet2",
           "source_lag": null,
-          "target": "ge-0/0/5",
+          "target": "Ethernet6",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -130,7 +130,7 @@
         "interface": {
           "source": "Ethernet3",
           "source_lag": null,
-          "target": "ge-0/0/4",
+          "target": "Ethernet5",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -145,7 +145,7 @@
         "interface": {
           "source": "Ethernet4",
           "source_lag": null,
-          "target": "ge-0/0/5",
+          "target": "Ethernet6",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -160,7 +160,7 @@
         "interface": {
           "source": "Ethernet5",
           "source_lag": null,
-          "target": "ge-0/0/6",
+          "target": "Ethernet7",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -175,7 +175,7 @@
         "interface": {
           "source": "Ethernet6",
           "source_lag": null,
-          "target": "ge-0/0/7",
+          "target": "Ethernet8",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -190,7 +190,7 @@
         "interface": {
           "source": "Ethernet7",
           "source_lag": null,
-          "target": "ge-0/0/6",
+          "target": "Ethernet7",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -205,7 +205,7 @@
         "interface": {
           "source": "Ethernet8",
           "source_lag": null,
-          "target": "ge-0/0/7",
+          "target": "Ethernet8",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -220,7 +220,7 @@
         "interface": {
           "source": "Ethernet9",
           "source_lag": null,
-          "target": "enp1s4",
+          "target": "Ethernet1",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -235,7 +235,7 @@
         "interface": {
           "source": "Ethernet10",
           "source_lag": null,
-          "target": "enp1s5",
+          "target": "Ethernet2",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -250,7 +250,7 @@
         "interface": {
           "source": "Ethernet11",
           "source_lag": null,
-          "target": "enp1s4",
+          "target": "Ethernet1",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -265,7 +265,7 @@
         "interface": {
           "source": "Ethernet12",
           "source_lag": null,
-          "target": "enp1s5",
+          "target": "Ethernet2",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -278,9 +278,9 @@
       "cable_id": 17,
       "meta": {
         "interface": {
-          "source": "ge-0/0/0",
+          "source": "Ethernet1",
           "source_lag": null,
-          "target": "GigabitEthernet0/0/0/3",
+          "target": "ge-0/0/3",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -293,9 +293,9 @@
       "cable_id": 18,
       "meta": {
         "interface": {
-          "source": "ge-0/0/1",
+          "source": "Ethernet2",
           "source_lag": null,
-          "target": "GigabitEthernet0/0/0/3",
+          "target": "ge-0/0/3",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -308,9 +308,9 @@
       "cable_id": 15,
       "meta": {
         "interface": {
-          "source": "ge-0/0/2",
+          "source": "Ethernet3",
           "source_lag": null,
-          "target": "ge-0/0/2",
+          "target": "Ethernet3",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -323,9 +323,9 @@
       "cable_id": 16,
       "meta": {
         "interface": {
-          "source": "ge-0/0/3",
+          "source": "Ethernet4",
           "source_lag": null,
-          "target": "ge-0/0/3",
+          "target": "Ethernet4",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -338,7 +338,7 @@
       "cable_id": 21,
       "meta": {
         "interface": {
-          "source": "GigabitEthernet0/0/0/0",
+          "source": "ge-0/0/0",
           "source_lag": null,
           "target": "ge-0/0/0",
           "target_lag": null
@@ -353,9 +353,9 @@
       "cable_id": 20,
       "meta": {
         "interface": {
-          "source": "GigabitEthernet0/0/0/1",
+          "source": "ge-0/0/1",
           "source_lag": null,
-          "target": "GigabitEthernet0/0/0/1",
+          "target": "ge-0/0/1",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -368,9 +368,9 @@
       "cable_id": 14,
       "meta": {
         "interface": {
-          "source": "GigabitEthernet0/0/0/2",
+          "source": "ge-0/0/2",
           "source_lag": null,
-          "target": "ge-0/0/1",
+          "target": "Ethernet2",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -670,7 +670,7 @@
         "interface": {
           "source": "ge-0/0/0",
           "source_lag": null,
-          "target": "GigabitEthernet0/0/0/0",
+          "target": "ge-0/0/0",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -683,9 +683,9 @@
       "cable_id": 13,
       "meta": {
         "interface": {
-          "source": "GigabitEthernet0/0/0/2",
+          "source": "ge-0/0/2",
           "source_lag": null,
-          "target": "ge-0/0/0",
+          "target": "Ethernet1",
           "target_lag": null
         },
         "bandwidth": "1G"
