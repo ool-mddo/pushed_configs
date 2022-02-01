@@ -1,8 +1,8 @@
 version: "3.7"
 services:
   batfish:
-    image: batfish/allinone:latest
-    container_name: batfish
+    image: ghcr.io/ool-mddo/mddo-batfish:main 
+    container_name: mddo-batfish
     volumes:
     - ./mnt:/mnt
     - ../mddo_network:/mnt/mddo_network
