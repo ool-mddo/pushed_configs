@@ -26,6 +26,9 @@ jobs:
             - 8000:8080
         EOF
         docker-compose up -d
+
+    - name: install dependencies
+      run: pip3 install -r requirements.txt
     
     - name: prepare mddo-batfish
       run: docker-compose up -d
