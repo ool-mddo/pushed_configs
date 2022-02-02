@@ -58,17 +58,6 @@ interfaces {
             }
         }
     }
-    ge-0/0/1 {
-        description to_RegionB-PE02_ge-0/0/2;
-        unit 0 {
-            family inet {
-                address 172.17.3.2/30;
-            }
-            family inet6 {
-                address fc00:172:17:3::2/64;
-            }
-        }
-    }
     ge-0/0/2 {
         description to_RegionB-CE02_ge-0/0/2;
         gigether-options {

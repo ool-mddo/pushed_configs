@@ -64,17 +64,6 @@ interfaces {
             }
         }
     }
-    ge-0/0/2 {
-        description to_RegionB-CE01_ge-0/0/1;
-        unit 0 {
-            family inet {
-                address 172.17.3.1/30;
-            }
-            family inet6 {
-                address fc00:172:17:3::1/64;
-            }
-        }
-    }
     ge-0/0/3 {
         description to_RegionB-CE02_ge-0/0/1;
         unit 0 {
@@ -83,6 +72,17 @@ interfaces {
             }
             family inet6 {
                 address fc00:172:17:4::1/64;
+            }
+        }
+    }
+    ge-0/0/4 {
+        description to_RegionA-PE01_ge-0/0/4;
+        unit 0 {
+            family inet {
+                address 10.1.2.1/30;
+            }
+            family inet6 {
+                address fc00:10:1:2::1/64
             }
         }
     }
@@ -114,7 +114,13 @@ protocols {
             neighbor 10.1.1.1 {
                 peer-as 65000;
             }
+            neighbor 10.1.2.1 {
+                peer-as 65000;
+            }
             neighbor fc00:10:1:1::1 {
+                peer-as 65000;
+            }
+            neighbor fc00:10:1:2::1 {
                 peer-as 65000;
             }
         }
@@ -132,14 +138,12 @@ protocols {
     ospf {
         export ospf-default;
         area 0.0.0.0 {
-            interface ge-0/0/2.0;
             interface ge-0/0/3.0;
         }
     }
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
-            interface ge-0/0/2.0;
             interface ge-0/0/3.0;
         }
     }

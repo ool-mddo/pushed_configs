@@ -75,14 +75,14 @@ interfaces {
             }
         }
     }
-    ge-0/0/3 {
-        description to_RegionA-CE02_Ethernet1;
+    ge-0/0/4 {
+        description to_RegionB-PE02_ge-0/0/4;
         unit 0 {
             family inet {
-                address 172.16.2.1/30;
+                address 10.1.2.1/30;
             }
             family inet6 {
-                address fc00:172:16:2::1/64;
+                address fc00:10:1:2::1/64;
             }
         }
     }
@@ -114,7 +114,13 @@ protocols {
             neighbor 10.1.0.2 {
                 peer-as 65001;
             }
+            neighbor 10.1.2.2 {
+                peer-as 65001;
+            }
             neighbor fc00:10:1::2 {
+                peer-as 65001;
+            }
+            neighbor fc00:10:1:2::2 {
                 peer-as 65001;
             }
         }
@@ -133,14 +139,12 @@ protocols {
         export ospf-default;
         area 0.0.0.0 {
             interface ge-0/0/2.0;
-            interface ge-0/0/3.0;
         }
     }
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
             interface ge-0/0/2.0;
-            interface ge-0/0/3.0;
         }
     }
     lldp {

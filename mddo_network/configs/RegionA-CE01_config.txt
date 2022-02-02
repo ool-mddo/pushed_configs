@@ -51,12 +51,6 @@ interface Ethernet1
    ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet2
-   description to_RegionA-PE02_ge-0/0/2
-   no switchport
-   ip address 172.16.3.2/30
-   ipv6 enable
-   ipv6 address fc00:172:16:3::2/64
-   ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet3
    description to_RegionA-CE02_Ethernet3
