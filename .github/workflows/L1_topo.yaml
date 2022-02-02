@@ -37,7 +37,7 @@ jobs:
       run: bash wait_service.sh
 
     - name: parse description
-      run: docker-compose exec -T mddo-batfish python3 /mnt/description2netbox.py http://host.docker.internal:8000 0123456789abcdef0123456789abcdef01234567
+      run: docker-compose exec -T batfish python3 /mnt/description2netbox.py http://host.docker.internal:8000 0123456789abcdef0123456789abcdef01234567
 
     - name: extract L1 topo as inet-henge format
       run: python3 netbox2inet-henge.py http://localhost:8000 0123456789abcdef0123456789abcdef01234567 1 > ../inet-henge/netbox.json
