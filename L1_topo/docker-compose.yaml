@@ -2,7 +2,6 @@ version: "3.7"
 services:
   batfish:
     image: ghcr.io/ool-mddo/mddo-batfish:main 
-    container_name: mddo-batfish
     volumes:
     - ./mnt:/mnt
     - ../mddo_network:/mnt/mddo_network
