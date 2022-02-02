@@ -94,19 +94,19 @@ interface Ethernet8
    channel-group 4 mode active
 !
 interface Ethernet9
-   description to_RegionA-Svr01_Ethernet1
+   description to_RegionA-Svr01_enp1s4
    switchport access vlan 10
 !
 interface Ethernet10
-   description to_RegionA-Svr01_Ethernet2
+   description to_RegionA-Svr01_enp1s5
    switchport access vlan 110
 !
 interface Ethernet11
-   description to_RegionA-Svr02_Ethernet1
+   description to_RegionA-Svr02_enp1s4
    switchport access vlan 10
 !
 interface Ethernet12
-   description to_RegionA-Svr02_Ethernet2
+   description to_RegionA-Svr02_enp1s5
    switchport access vlan 110
 !
 interface Ethernet13
