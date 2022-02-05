@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2021-12-14 03:51:19 UTC by vrnetlab
+## Last commit: 2022-02-05 11:23:54 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-CE01;
@@ -277,6 +277,7 @@ protocols {
         area 0.0.0.0 {
             interface ge-0/0/0.0;
             interface ge-0/0/1.0;
+            interface ae0.0;
         }
     }
     ospf3 {
@@ -284,6 +285,7 @@ protocols {
         area 0.0.0.0 {
             interface ge-0/0/0.0;
             interface ge-0/0/1.0;
+            interface ae0.0;
         }
     }
     lldp {
