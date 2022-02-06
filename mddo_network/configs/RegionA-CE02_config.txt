@@ -29,6 +29,7 @@ interface Port-Channel1
    ip address 172.16.5.2/30
    ipv6 address fc00:172:16:5::2/64
    port-channel min-links 1
+   ipv6 ospf 1 area 0.0.0.0
 !
 interface Port-Channel2
    load-interval 30
@@ -157,6 +158,7 @@ router ospf 1
    passive-interface default
    no passive-interface Ethernet1
    no passive-interface Ethernet2
+   no passive-interface Port-Channel1
    network 0.0.0.0/0 area 0.0.0.0
    max-lsa 12000
 !
