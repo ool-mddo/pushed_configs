@@ -1,307 +1,165 @@
-show configuration 
-## Last commit: 2022-01-24 17:24:12 UTC by vrnetlab
-version 18.1R1.9;
-system {
-    host-name RegionA-CE02;
-    root-authentication {
-        encrypted-password "$6$vOte4zs5$j1X3fElYvJSt8VPNXx2KzRNrZIkp9CeRX83/W4wQo5K4Tl/MHZeMcvbymEzm9/2ya3S4hU993YDSLY26ROGnW/"; ## SECRET-DATA
-    }
-    login {
-        user vrnetlab {
-            uid 2000;
-            class super-user;
-            authentication {
-                encrypted-password "$6$CDmzGe/d$g43HmhI3FA.21JCYppnTg1h4q/JO4DOHSICLhhavqBem5zUTgKEcg5m9tBG1Ik6qmfb7L3v.wgj4/DkfgZejO0"; ## SECRET-DATA
-            }
-        }
-    }
-    services {
-        ssh;
-        netconf {
-            ssh;
-        }
-    }
-    syslog {
-        user * {
-            any emergency;
-        }
-        file messages {
-            any notice;
-            authorization info;
-        }
-        file interactive-commands {
-            interactive-commands any;
-        }
-    }
-}
-chassis {
-    aggregated-devices {
-        ethernet {
-            device-count 4;
-        }
-    }
-    fpc 0 {
-        pic 0 {
-            number-of-ports 96;
-        }
-    }
-}
-interfaces {
-    ge-0/0/0 {
-        description to_RegionA-PE01_GigabitEthernet0/0/0/3;
-        unit 0 {
-            family inet {
-                address 172.16.2.2/30;
-            }
-            family inet6 {
-                address fc00:172:16:2::2/64;
-            }
-        }
-    }
-    ge-0/0/1 {
-        description to_RegionA-PE02_GigabitEthernet0/0/0/3;
-        unit 0 {
-            family inet {
-                address 172.16.4.2/30;
-            }
-            family inet6 {
-                address fc00:172:17:4::2/64;
-            }
-        }
-    }
-    ge-0/0/2 {
-        description to_RegionA-CE01_ge-0/0/2;
-        gigether-options {
-            802.3ad ae0;
-        }
-    }
-    ge-0/0/3 {
-        description to_RegionA-CE01_ge-0/0/3;
-        gigether-options {
-            802.3ad ae0;
-        }
-    }
-    ge-0/0/4 {
-        description to_RegionA-Acc01_Ethernet3;
-        gigether-options {
-            802.3ad ae1;
-        }
-    }
-    ge-0/0/5 {
-        description to_RegionA-Acc01_Ethernet4;
-        gigether-options {
-            802.3ad ae1;
-        }
-    }
-    ge-0/0/6 {
-        description to_RegionA-Acc01_Ethernet7;
-        gigether-options {
-            802.3ad ae2;
-        }
-    }
-    ge-0/0/7 {
-        description to_RegionA-Acc01_Ethernet8;
-        gigether-options {
-            802.3ad ae2;
-        }
-    }
-    ae0 {
-        aggregated-ether-options {
-            lacp {
-                active;
-            }
-        }
-        unit 0 {
-            family inet {
-                address 172.16.5.2/30;
-            }
-            family inet6 {
-                address fc00:172:16:5::2/64;
-            }
-        }
-    }
-    ae1 {
-        flexible-vlan-tagging;
-        aggregated-ether-options {
-            lacp {
-                active;
-            }
-        }
-        unit 10 {
-            vlan-id 10;
-            family inet {
-                address 172.30.10.2/24 {
-                    vrrp-group 1 {
-                        virtual-address 172.30.10.3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae1 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-            family inet6 {
-                address fc00:172:30:10::2/64 {
-                    vrrp-inet6-group 1 {
-                        virtual-inet6-address fc00:172:30:10::3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae1 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        unit 110 {
-            vlan-id 110;
-            family inet {
-                address 172.30.110.2/24 {
-                    vrrp-group 2 {
-                        virtual-address 172.30.110.3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae1 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-            family inet6 {
-                address fc00:172:30:110::2/64 {
-                    vrrp-inet6-group 2 {
-                        virtual-inet6-address fc00:172:30:110::3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae1 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    ae2 {
-        flexible-vlan-tagging;
-        aggregated-ether-options {
-            lacp {
-                active;
-            }
-        }
-        unit 20 {
-            vlan-id 20;
-            family inet {
-                address 172.30.20.2/24 {
-                    vrrp-group 3 {
-                        virtual-address 172.30.20.3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae2 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-            family inet6 {
-                address fc00:172:30:20::2/64 {
-                    vrrp-inet6-group 3 {
-                        virtual-inet6-address fc00:172:30:20::3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae2 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        unit 120 {
-            vlan-id 120;
-            family inet {
-                address 172.30.120.2/24 {
-                    vrrp-group 2 {
-                        virtual-address 172.30.120.3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae2 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-            family inet6 {
-                address fc00:172:30:120::2/64 {
-                    vrrp-inet6-group 2 {
-                        virtual-inet6-address fc00:172:30:120::3;
-                        priority 100;
-                        accept-data;
-                        track {
-                            interface ae2 {
-                                priority-cost 20;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    fxp0 {
-        unit 0 {
-            family inet {
-                address 10.0.0.15/24;
-            }
-        }
-    }
-}
-routing-options {
-    router-id 1.1.1.4;
-}
-protocols {
-    ospf {
-        export EXPORTDIRECT;
-        area 0.0.0.0 {
-            interface ge-0/0/0.0;
-            interface ge-0/0/1.0;
-        }
-    }
-    ospf3 {
-        export EXPORTDIRECT;
-        area 0.0.0.0 {
-            interface ge-0/0/0.0;
-            interface ge-0/0/1.0;
-        }
-    }
-    lldp {
-        interface all;
-    }
-}
-policy-options {
-    policy-statement EXPORTDIRECT {
-        term 1 {
-            from protocol direct;
-            then accept;
-        }
-    }
-}
-routing-instances {
-    VR1 {
-        instance-type virtual-router;
-        interface ae1.110;
-        interface ae2.120;
-    }
-}
+! Command: show running-config
+! device: RegionA-CE02 (vEOS-lab, EOS-4.27.0F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+username vrnetlab role network-admin secret sha512 $6$zhx0EPChR/l1xlxN$EvaEk/eZ3EjvLezWfItKeCz5rqZGrMHxrHyBjU2.d.Gc4fPrBlHSROb0bJog6f/DdMrAKFIz0GVRIRe0WygIe1
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname RegionA-CE02
+!
+spanning-tree mode mstp
+!
+vlan 10,20,110,120
+!
+vrf instance vrf1
+!
+management api http-commands
+   protocol unix-socket
+   no shutdown
+!
+interface Port-Channel1
+   load-interval 30
+   no switchport
+   ip address 172.16.5.2/30
+   ipv6 address fc00:172:16:5::2/64
+   port-channel min-links 1
+!
+interface Port-Channel2
+   load-interval 30
+   switchport trunk allowed vlan 10,110
+   switchport mode trunk
+   port-channel min-links 1
+!
+interface Port-Channel3
+   load-interval 30
+   switchport trunk allowed vlan 20,120
+   switchport mode trunk
+   port-channel min-links 1
+!
+interface Ethernet1
+   no switchport
+   ip address 172.16.2.2/30
+   ipv6 enable
+   ipv6 address fc00:172:16:2::2/64
+   ipv6 ospf 1 area 0.0.0.0
+!
+interface Ethernet2
+   no switchport
+   ip address 172.16.4.2/30
+   ipv6 enable
+   ipv6 address fc00:172:16:4::2/64
+   ipv6 ospf 1 area 0.0.0.0
+!
+interface Ethernet3
+   speed forced 1000full
+   channel-group 1 mode active
+!
+interface Ethernet4
+   speed forced 1000full
+   channel-group 1 mode active
+!
+interface Ethernet5
+   load-interval 30
+   speed forced 1000full
+   switchport trunk allowed vlan 10,110
+   switchport mode trunk
+   channel-group 2 mode active
+!
+interface Ethernet6
+   load-interval 30
+   speed forced 1000full
+   switchport trunk allowed vlan 10,110
+   switchport mode trunk
+   channel-group 2 mode active
+!
+interface Ethernet7
+   speed forced 1000full
+   switchport trunk allowed vlan 20,120
+   switchport mode trunk
+   channel-group 3 mode active
+!
+interface Ethernet8
+   load-interval 30
+   speed forced 1000full
+   switchport trunk allowed vlan 20,120
+   switchport mode trunk
+   channel-group 3 mode active
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Ethernet13
+!
+interface Ethernet14
+!
+interface Ethernet15
+!
+interface Ethernet16
+!
+interface Ethernet17
+!
+interface Ethernet18
+!
+interface Ethernet19
+!
+interface Management1
+   speed 10full
+   ip address 10.0.0.15/24
+   ipv6 enable
+   ipv6 address auto-config
+   ipv6 nd ra rx accept default-route
+!
+interface Vlan10
+   ip address 172.30.10.2/24
+   ipv6 address fc00:172:30:10::2/64
+   vrrp 1 ipv4 172.30.10.3
+   vrrp 1 ipv6 fc00:172:30:10::3
+!
+interface Vlan20
+   ip address 172.30.20.2/24
+   vrrp 1 ipv4 172.30.20.3
+   vrrp 1 ipv6 fc00:172:30:20::3
+!
+interface Vlan110
+   vrf vrf1
+   ip address 172.30.110.2/24
+   ipv6 address fc00:172:30:110::2/64
+   vrrp 1 ipv4 172.30.110.3
+   vrrp 1 ipv6 fc00:172:30:110::3
+!
+interface Vlan120
+   vrf vrf1
+   ip address 172.30.120.2/24
+   ipv6 address fc00:172:30:120::2/64
+   vrrp 1 ipv4 172.30.120.3
+   vrrp 1 ipv6 fc00:172:30:120::3
+!
+ip routing ipv6 interfaces 
+ip routing vrf vrf1
+!
+ipv6 unicast-routing
+!
+router ospf 1
+   router-id 1.1.1.4
+   passive-interface default
+   no passive-interface Ethernet1
+   no passive-interface Ethernet2
+   no passive-interface Port-Channel1
+   network 0.0.0.0/0 area 0.0.0.0
+   max-lsa 12000
+!
+ipv6 router ospf 1
+   router-id 1.1.1.4
+!
+end

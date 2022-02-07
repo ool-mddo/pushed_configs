@@ -1,9 +1,15 @@
-Local Interface    Parent Interface    Chassis Id          Port info          System Name
-ge-0/0/0           -                   02:d2:45:6c:a4:05   Gi0/0/0/2          RegionA-PE01        
-ge-0/0/1           -                   02:d2:45:6c:a4:05   Gi0/0/0/2          RegionA-PE02        
-ge-0/0/2           ae0                 2c:6b:f5:38:d2:c0   520                RegionA-CE02        
-ge-0/0/3           ae0                 2c:6b:f5:38:d2:c0   521                RegionA-CE02        
-ge-0/0/4           ae1                 52:54:00:6c:58:90   Ethernet1          RegionA-Acc01       
-ge-0/0/5           ae1                 52:54:00:6c:58:90   Ethernet2          RegionA-Acc01       
-ge-0/0/6           ae2                 52:54:00:6c:58:90   Ethernet5          RegionA-Acc01       
-ge-0/0/7           ae2                 52:54:00:6c:58:90   Ethernet6          RegionA-Acc01
+Last table change time   : 1:55:26 ago
+Number of table inserts  : 11
+Number of table deletes  : 4
+Number of table drops    : 0
+Number of table age-outs : 4
+
+Port          Neighbor Device ID       Neighbor Port ID    TTL
+---------- ------------------------ ---------------------- ---
+Et1           RegionA-PE01             520                 120
+Et3           RegionA-CE02             Ethernet3           120
+Et4           RegionA-CE02             Ethernet4           120
+Et5           RegionA-Acc01            Ethernet1           120
+Et6           RegionA-Acc01            Ethernet2           120
+Et7           RegionA-Acc01            Ethernet5           120
+Et8           RegionA-Acc01            Ethernet6           120
