@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-02-05 11:25:48 UTC by root
+## Last commit: 2022-02-08 16:09:04 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-CE02;
@@ -47,17 +47,6 @@ chassis {
     }
 }
 interfaces {
-    ge-0/0/0 {
-        description to_RegionB-PE01_ge-0/0/3;
-        unit 0 {
-            family inet {
-                address 172.17.2.2/30;
-            }
-            family inet6 {
-                address fc00:172:17:2::2/64;
-            }
-        }
-    }
     ge-0/0/1 {
         description to_RegionB-PE02_ge-0/0/3;
         unit 0 {
