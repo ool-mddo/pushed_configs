@@ -79,10 +79,10 @@ interfaces {
         description to_RegionA-PE01_ge-0/0/4;
         unit 0 {
             family inet {
-                address 10.1.2.1/30;
+                address 10.1.2.2/30;
             }
             family inet6 {
-                address fc00:10:1:2::1/64
+                address fc00:10:1:2::2/64
             }
         }
     }
