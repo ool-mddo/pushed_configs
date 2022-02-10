@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-02-07 16:08:53 UTC by root
+## Last commit: 2022-02-10 08:23:31 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionA-PE02;
@@ -139,6 +139,7 @@ protocols {
         export ospf-default;
         area 0.0.0.0 {
             interface ge-0/0/3.0;
+            interface ge-0/0/1.0;
         }
     }
     ospf3 {
