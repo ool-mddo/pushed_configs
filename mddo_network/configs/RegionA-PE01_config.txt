@@ -75,17 +75,6 @@ interfaces {
             }
         }
     }
-    ge-0/0/4 {
-        description to_RegionB-PE02_ge-0/0/4;
-        unit 0 {
-            family inet {
-                address 10.1.2.1/30;
-            }
-            family inet6 {
-                address fc00:10:1:2::1/64;
-            }
-        }
-    }
     fxp0 {
         unit 0 {
             family inet {
