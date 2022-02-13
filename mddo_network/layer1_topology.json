@@ -342,36 +342,6 @@
     },
     {
       "node1": {
-        "hostname": "RegionA-PE02",
-        "interfaceName": "ge-0/0/4"
-      },
-      "node2": {
-        "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/4"
-      },
-      "node2": {
-        "hostname": "RegionA-PE02",
-        "interfaceName": "ge-0/0/4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/0"
-      },
-      "node2": {
-        "hostname": "RegionA-PE01",
-        "interfaceName": "ge-0/0/0"
-      }
-    },
-    {
-      "node1": {
         "hostname": "RegionA-PE01",
         "interfaceName": "ge-0/0/0"
       },
@@ -383,341 +353,11 @@
     {
       "node1": {
         "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/1"
-      },
-      "node2": {
-        "hostname": "RegionB-PE02",
-        "interfaceName": "ge-0/0/1"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-PE02",
-        "interfaceName": "ge-0/0/1"
-      },
-      "node2": {
-        "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/1"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/2"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/0"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
         "interfaceName": "ge-0/0/0"
       },
       "node2": {
-        "hostname": "RegionB-PE01",
-        "interfaceName": "ge-0/0/2"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/2"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/2"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/2"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/2"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/3"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/3"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/3"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/3"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/4"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet1"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet1"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/5"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet2"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet2"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/5"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/6"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet1"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet1"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/6"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/7"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet2"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet2"
-      },
-      "node2": {
-        "hostname": "RegionB-CE01",
-        "interfaceName": "ge-0/0/7"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet3"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/6"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/6"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet3"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet4"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/7"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/7"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet5"
-      },
-      "node2": {
-        "hostname": "RegionB-Svr02",
-        "interfaceName": "enp1s4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Svr02",
-        "interfaceName": "enp1s4"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet5"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet6"
-      },
-      "node2": {
-        "hostname": "RegionB-Svr02",
-        "interfaceName": "enp1s5"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Svr02",
-        "interfaceName": "enp1s5"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc02",
-        "interfaceName": "Ethernet6"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet3"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/4"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet3"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet4"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/5"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/5"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet5"
-      },
-      "node2": {
-        "hostname": "RegionB-Svr01",
-        "interfaceName": "enp1s4"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Svr01",
-        "interfaceName": "enp1s4"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet5"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet6"
-      },
-      "node2": {
-        "hostname": "RegionB-Svr01",
-        "interfaceName": "enp1s5"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-Svr01",
-        "interfaceName": "enp1s5"
-      },
-      "node2": {
-        "hostname": "RegionB-Acc01",
-        "interfaceName": "Ethernet6"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/1"
-      },
-      "node2": {
-        "hostname": "RegionB-PE02",
-        "interfaceName": "ge-0/0/3"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RegionB-PE02",
-        "interfaceName": "ge-0/0/3"
-      },
-      "node2": {
-        "hostname": "RegionB-CE02",
-        "interfaceName": "ge-0/0/1"
+        "hostname": "RegionA-PE01",
+        "interfaceName": "ge-0/0/0"
       }
     },
     {
@@ -742,22 +382,342 @@
     },
     {
       "node1": {
-        "hostname": "RegionA-PE01",
-        "interfaceName": "ge-0/0/4"
+        "hostname": "RegionB-PE01",
+        "interfaceName": "ge-0/0/1"
       },
       "node2": {
         "hostname": "RegionB-PE02",
-        "interfaceName": "ge-0/0/4"
+        "interfaceName": "ge-0/0/1"
       }
     },
     {
       "node1": {
         "hostname": "RegionB-PE02",
+        "interfaceName": "ge-0/0/1"
+      },
+      "node2": {
+        "hostname": "RegionB-PE01",
+        "interfaceName": "ge-0/0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-PE01",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/0"
+      },
+      "node2": {
+        "hostname": "RegionB-PE01",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/2"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
         "interfaceName": "ge-0/0/4"
       },
       "node2": {
-        "hostname": "RegionA-PE01",
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet1"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
         "interfaceName": "ge-0/0/4"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/5"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet2"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/5"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/6"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet1"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/6"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/7"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet2"
+      },
+      "node2": {
+        "hostname": "RegionB-CE01",
+        "interfaceName": "ge-0/0/7"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet3"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/6"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/6"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet4"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/7"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/7"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet4"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet5"
+      },
+      "node2": {
+        "hostname": "RegionB-Svr02",
+        "interfaceName": "enp1s4"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Svr02",
+        "interfaceName": "enp1s4"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet5"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet6"
+      },
+      "node2": {
+        "hostname": "RegionB-Svr02",
+        "interfaceName": "enp1s5"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Svr02",
+        "interfaceName": "enp1s5"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc02",
+        "interfaceName": "Ethernet6"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet3"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/4"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/4"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet4"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/5"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/5"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet4"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet5"
+      },
+      "node2": {
+        "hostname": "RegionB-Svr01",
+        "interfaceName": "enp1s4"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Svr01",
+        "interfaceName": "enp1s4"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet5"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet6"
+      },
+      "node2": {
+        "hostname": "RegionB-Svr01",
+        "interfaceName": "enp1s5"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-Svr01",
+        "interfaceName": "enp1s5"
+      },
+      "node2": {
+        "hostname": "RegionB-Acc01",
+        "interfaceName": "Ethernet6"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/1"
+      },
+      "node2": {
+        "hostname": "RegionB-PE02",
+        "interfaceName": "ge-0/0/3"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-PE02",
+        "interfaceName": "ge-0/0/3"
+      },
+      "node2": {
+        "hostname": "RegionB-CE02",
+        "interfaceName": "ge-0/0/1"
       }
     }
   ]
