@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-02-22 18:07:29 UTC by root
+## Last commit: 2022-02-22 18:46:52 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-PE02;
@@ -133,6 +133,7 @@ protocols {
         }
         group INT6 {
             local-address fc00:2:2:2::3;
+            export EXPORTOSPF;
             neighbor fc00:2:2:2::2 {
                 peer-as 65001;
             }
