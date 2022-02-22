@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-02-08 17:02:03 UTC by root
+## Last commit: 2022-02-22 18:07:29 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-PE02;
@@ -75,21 +75,20 @@ interfaces {
             }
         }
     }
-    ge-0/0/4 {
-        description to_RegionA-PE01_ge-0/0/4;
-        unit 0 {
-            family inet {
-                address 10.1.2.2/30;
-            }
-            family inet6 {
-                address fc00:10:1:2::2/64;
-            }
-        }
-    }
     fxp0 {
         unit 0 {
             family inet {
                 address 10.0.0.15/24;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 2.2.2.3/32;
+            }
+            family inet6 {
+                address fc00:2:2:2::3/64;
             }
         }
     }
@@ -126,11 +125,15 @@ protocols {
         }
         group INT {
             type internal;
+            local-address 2.2.2.3;
             export EXPORTOSPF;
-            neighbor 172.17.0.1 {
+            neighbor 2.2.2.2 {
                 peer-as 65001;
             }
-            neighbor fc00:172:17::1 {
+        }
+        group INT6 {
+            local-address fc00:2:2:2::3;
+            neighbor fc00:2:2:2::2 {
                 peer-as 65001;
             }
         }
@@ -140,6 +143,8 @@ protocols {
         area 0.0.0.0 {
             interface ge-0/0/2.0;
             interface ge-0/0/3.0;
+            interface ge-0/0/1.0;
+            interface lo0.0;
         }
     }
     ospf3 {
@@ -147,6 +152,8 @@ protocols {
         area 0.0.0.0 {
             interface ge-0/0/2.0;
             interface ge-0/0/3.0;
+            interface ge-0/0/1.0;
+            interface lo0.0;
         }
     }
     lldp {
