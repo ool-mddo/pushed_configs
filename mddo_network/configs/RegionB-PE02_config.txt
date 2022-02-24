@@ -113,9 +113,6 @@ protocols {
             neighbor 10.1.1.1 {
                 peer-as 65000;
             }
-            neighbor 10.1.2.1 {
-                peer-as 65000;
-            }
             neighbor fc00:10:1:1::1 {
                 peer-as 65000;
             }
@@ -145,6 +142,7 @@ protocols {
     ospf {
         export ospf-default;
         area 0.0.0.0 {
+            interface ge-0/0/2.0;
             interface ge-0/0/3.0;
             interface ge-0/0/1.0;
             interface lo0.0;
@@ -153,6 +151,7 @@ protocols {
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
+            interface ge-0/0/2.0;
             interface ge-0/0/3.0;
             interface ge-0/0/1.0;
             interface lo0.0;
