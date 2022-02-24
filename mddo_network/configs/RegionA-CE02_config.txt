@@ -5,7 +5,7 @@
 !
 no aaa root
 !
-username vrnetlab role network-admin secret sha512 $6$LZDWoELQkJfighPT$p2Z3M2fKhN./F2I8Sf.UDhosuu.lR051SfphixuEq8D1DAbEB93dB.0cZ4Lh3sZrMTN3BqIrMdadsNzkMVPbW1
+username vrnetlab role network-admin secret sha512 $6$zhx0EPChR/l1xlxN$EvaEk/eZ3EjvLezWfItKeCz5rqZGrMHxrHyBjU2.d.Gc4fPrBlHSROb0bJog6f/DdMrAKFIz0GVRIRe0WygIe1
 !
 transceiver qsfp default-mode 4x10G
 !
@@ -29,7 +29,6 @@ interface Port-Channel1
    ip address 172.16.5.2/30
    ipv6 address fc00:172:16:5::2/64
    port-channel min-links 1
-   ipv6 ospf 1 area 0.0.0.0
 !
 interface Port-Channel2
    load-interval 30
@@ -44,6 +43,9 @@ interface Port-Channel3
    port-channel min-links 1
 !
 interface Ethernet1
+   no switchport
+   ipv6 enable
+   ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet2
    description to_RegionA-PE02_ge-0/0/3

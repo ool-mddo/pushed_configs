@@ -27,14 +27,11 @@ jobs:
         EOF
         docker-compose up -d
 
-    - name: prepare batfish
-      run: docker-compose up -d
-
     - name: install dependencies
       run: pip3 install -r requirements.txt
-
-    - name: install dependencies on batfish container
-      run: docker-compose exec -T batfish pip3 install pynetbox
+    
+    - name: prepare mddo-batfish
+      run: docker-compose up -d
 
     - name: wait NetBox
       run: bash wait_service.sh

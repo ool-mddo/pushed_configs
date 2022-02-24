@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2021-12-14 03:51:12 UTC by vrnetlab
+## Last commit: 2022-02-22 18:35:30 UTC by vrnetlab
 version 18.1R1.9;
 system {
     host-name RegionA-PE01;
@@ -11,7 +11,7 @@ system {
             uid 2000;
             class super-user;
             authentication {
-                encrypted-password "$6$CDmzGe/d$g43HmhI3FA.21JCYppnTg1h4q/JO4DOHSICLhhavqBem5zUTgKEcg5m9tBG1Ik6qmfb7L3v.wgj4/DkfgZejO0"; ## SECRET-DATA
+                encrypted-password "$6$J6ejaVYH$tGgA7n6s6eb.QUX.RpHNVw9xlGNWPK6D8NEVbJt/8B6/PpREFVDSbvuPJn3/HwzklK8vdJ/MOpB01M/fwroT51"; ## SECRET-DATA
             }
         }
     }
@@ -82,6 +82,16 @@ interfaces {
             }
         }
     }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 1.1.1.1/32;
+            }
+            family inet6 {
+                address fc00:1:1:1::1/64;
+            }
+        }
+    }
 }
 routing-options {
     rib inet6.0 {
@@ -115,11 +125,16 @@ protocols {
         }
         group INT {
             type internal;
+            local-address 1.1.1.1;
             export EXPORTOSPF;
-            neighbor 172.16.0.2 {
+            neighbor 1.1.1.2 {
                 peer-as 65000;
             }
-            neighbor fc00:172:16::2 {
+        }
+        group INT6 {
+            local-address fc00:1:1:1::1;
+            export EXPORTOSPF;
+            neighbor fc00:1:1:1::2 {
                 peer-as 65000;
             }
         }
@@ -128,12 +143,18 @@ protocols {
         export ospf-default;
         area 0.0.0.0 {
             interface ge-0/0/2.0;
+            interface ge-0/0/1.0;
+            interface ge-0/0/3.0;
+            interface lo0.0;
         }
     }
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
             interface ge-0/0/2.0;
+            interface ge-0/0/3.0;
+            interface ge-0/0/1.0;
+            interface lo0.0;
         }
     }
     lldp {
@@ -160,3 +181,4 @@ policy-options {
         then accept;
     }
 }
+

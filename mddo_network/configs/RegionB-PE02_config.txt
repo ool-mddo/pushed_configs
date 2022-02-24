@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2021-12-14 03:51:10 UTC by vrnetlab
+## Last commit: 2022-02-22 18:46:52 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-PE02;
@@ -82,6 +82,16 @@ interfaces {
             }
         }
     }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 2.2.2.3/32;
+            }
+            family inet6 {
+                address fc00:2:2:2::3/64;
+            }
+        }
+    }
 }
 routing-options {
     rib inet6.0 {
@@ -109,17 +119,25 @@ protocols {
             neighbor fc00:10:1:1::1 {
                 peer-as 65000;
             }
+            neighbor 10.1.2.1 {
+                peer-as 65000;
+            }
             neighbor fc00:10:1:2::1 {
                 peer-as 65000;
             }
         }
         group INT {
             type internal;
+            local-address 2.2.2.3;
             export EXPORTOSPF;
-            neighbor 172.17.0.1 {
+            neighbor 2.2.2.2 {
                 peer-as 65001;
             }
-            neighbor fc00:172:17::1 {
+        }
+        group INT6 {
+            local-address fc00:2:2:2::3;
+            export EXPORTOSPF;
+            neighbor fc00:2:2:2::2 {
                 peer-as 65001;
             }
         }
@@ -128,12 +146,16 @@ protocols {
         export ospf-default;
         area 0.0.0.0 {
             interface ge-0/0/3.0;
+            interface ge-0/0/1.0;
+            interface lo0.0;
         }
     }
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
             interface ge-0/0/3.0;
+            interface ge-0/0/1.0;
+            interface lo0.0;
         }
     }
     lldp {

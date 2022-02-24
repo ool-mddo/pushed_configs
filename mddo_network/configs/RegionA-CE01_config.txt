@@ -5,7 +5,7 @@
 !
 no aaa root
 !
-username vrnetlab role network-admin secret sha512 $6$JIP1lNfVhDygCz2M$PEw5p3F8fjG6d1zsBfVrDT5//6rjgs32lpHuBJjcfqlPkwe3.KQCAepZyROIFPXV4dxKjRZflnP9.FGz/xZx60
+username vrnetlab role network-admin secret sha512 $6$xW5ZKjlPQg8L4FrU$n8Uf0UgR8pcXWr5VSrrM0VfXzUJajxHJ3WugsgVSfd6OugWHDuBS..JxuINja0vkDTnk3zhiWC3v2k//spWgC.
 !
 transceiver qsfp default-mode 4x10G
 !
@@ -52,6 +52,8 @@ interface Ethernet1
    ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet2
+   no switchport
+   ipv6 ospf 1 area 0.0.0.0
 !
 interface Ethernet3
    description to_RegionA-CE02_Ethernet3
