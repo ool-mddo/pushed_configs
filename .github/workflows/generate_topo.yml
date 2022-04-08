@@ -13,16 +13,23 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: prepare netomox
-      run: docker-compose up -d
+    - name: prepare playground 
+      run: git clone -b feature/gha https://github.com/ool-mddo/playground.git
 
-    - name: bundle exec rake
-      run: docker-compose run netomox-exp bundle exec rake 
+    - name: delete file
+      run: rm -f ~/playground/pushed-flug/*
+
+    - name: make file
+      run: touch ~/playground/pushed-flug/${{ github.ref_name }}
+
+    - name: write date
+      run: echo `date` > ~/playground/pushed-flug/${{ github.ref_name }}
 
     - name: commit files
       run: |
+          cd ~/playground
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ../netoviz_model
-          git commit -m "Update netoviz_model"
+          git add -A
+          git commit -m "Update from pushed-config"
           git push
