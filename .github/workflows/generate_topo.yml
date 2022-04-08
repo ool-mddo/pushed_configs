@@ -17,17 +17,17 @@ jobs:
       run: git clone -b feature/gha https://github.com/ool-mddo/playground.git
 
     - name: delete file
-      run: rm -f ~/playground/pushed-flug/*
+      run: rm -f ./playground/pushed-flug/*
 
     - name: make file
-      run: touch ~/playground/pushed-flug/202202demo
+      run: touch ./playground/pushed-flug/202202demo
 
     - name: write date
-      run: echo `date` > ~/playground/pushed-flug/202202demo
+      run: echo `date` > ./playground/pushed-flug/202202demo
 
     - name: commit files
       run: |
-          cd ~/playground
+          cd ./playground
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
