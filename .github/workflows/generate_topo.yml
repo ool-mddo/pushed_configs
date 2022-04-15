@@ -16,6 +16,7 @@ jobs:
     - name: prepare playground 
       env:
         GITHUB_IO_REPO_DEPLOY_KEY: ${{ secrets.REPO_DEPLOY_KEY }}
+        GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
       run: |
         echo "$GITHUB_IO_REPO_DEPLOY_KEY" > ~/deploy_key.pem
         chmod 600 ~/deploy_key.pem
