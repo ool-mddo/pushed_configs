@@ -14,7 +14,12 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: prepare playground 
-      run: git clone -b feature/gha https://github.com/ool-mddo/playground.git
+      env:
+        GITHUB_IO_REPO_DEPLOY_KEY: ${{ secrets.REPO_DEPLOY_KEY }}
+      run: |
+        echo "$GITHUB_IO_REPO_DEPLOY_KEY" > ~/deploy_key.pem
+        chmod 600 ~/deploy_key.pem
+        git clone -b feature/gha git@github.com:ool-mddo/playground.git
 
     - name: delete file
       run: rm -f ./playground/pushed-flug/*
@@ -26,6 +31,8 @@ jobs:
       run: echo `date` > ./playground/pushed-flug/202202demo
 
     - name: commit files
+      env:
+        GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
       run: |
           cd ./playground
           git config --local user.email "action@github.com"
