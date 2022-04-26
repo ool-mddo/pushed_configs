@@ -23,13 +23,13 @@ jobs:
         git clone -b feature/gha git@github.com:ool-mddo/playground.git
 
     - name: delete file
-      run: rm -f ./playground/pushed-flug/*
+      run: rm -f ./playground/pushed_flag/*
 
-    - name: make file
-      run: touch ./playground/pushed-flug/202202demo
+    - name: create file
+      run: touch ./playground/pushed_flag/202202demo
 
     - name: write date
-      run: echo `date` > ./playground/pushed-flug/202202demo
+      run: echo `date` > ./playground/pushed_flag/202202demo
 
     - name: commit files
       env:
