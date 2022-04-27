@@ -26,10 +26,10 @@ jobs:
       run: rm -f ./playground/pushed_flag/*
 
     - name: create file
-      run: touch ./playground/pushed_flag/202202demo
+      run: touch ./playground/pushed_flag/${{ github.ref_name }}
 
     - name: write date
-      run: echo `date` > ./playground/pushed_flag/202202demo
+      run: echo `date` > ./playground/pushed_flag/${{ github.ref_name }}
 
     - name: commit files
       env:
