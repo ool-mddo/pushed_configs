@@ -1,7 +1,12 @@
 on:
   push:
     paths:
-    - "inet-henge/**"
+    - "mddo_network/**"
+    paths-ignore:
+    - "mddo_network/configs/**"
+    - "mddo_network/hosts/**"
+    - "mddo_network/status/**"
+
 
 defaults:
   run:
