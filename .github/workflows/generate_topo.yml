@@ -1,11 +1,7 @@
 on:
   push:
     paths:
-    - "mddo_network/**"
-    paths-ignore:
-    - "mddo_network/configs/**"
-    - "mddo_network/hosts/**"
-    - "mddo_network/status/**"
+    - "mddo_network/layer1_topology.json"
 
 
 defaults:
