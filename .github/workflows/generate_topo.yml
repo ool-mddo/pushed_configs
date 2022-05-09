@@ -1,8 +1,7 @@
 on:
   push:
     paths:
-    - "mddo_network/layer1_topology.json"
-
+    - "inet-henge/**"
 
 defaults:
   run:
