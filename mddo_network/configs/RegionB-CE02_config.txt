@@ -1,8 +1,8 @@
 show configuration 
-## Last commit: 2022-02-08 16:04:58 UTC by root
+## Last commit: 2022-02-08 16:09:04 UTC by root
 version 18.1R1.9;
 system {
-    host-name RegionC-CE01;
+    host-name RegionB-CE02;
     root-authentication {
         encrypted-password "$6$vOte4zs5$j1X3fElYvJSt8VPNXx2KzRNrZIkp9CeRX83/W4wQo5K4Tl/MHZeMcvbymEzm9/2ya3S4hU993YDSLY26ROGnW/"; ## SECRET-DATA
     }
@@ -47,49 +47,49 @@ chassis {
     }
 }
 interfaces {
-    ge-0/0/0 {
-        description to_RegionC-PE01_ge-0/0/2;
+    ge-0/0/1 {
+        description to_RegionB-PE02_ge-0/0/3;
         unit 0 {
             family inet {
-                address 172.18.1.2/30;
+                address 172.17.4.2/30;
             }
             family inet6 {
-                address fc00:172:18:1::2/64;
+                address fc00:172:17:4::2/64;
             }
         }
     }
     ge-0/0/2 {
-        description to_RegionC-CE02_ge-0/0/2;
+        description to_RegionB-CE01_ge-0/0/2;
         gigether-options {
             802.3ad ae0;
         }
     }
     ge-0/0/3 {
-        description to_RegionC-CE02_ge-0/0/3;
+        description to_RegionB-CE01_ge-0/0/3;
         gigether-options {
             802.3ad ae0;
         }
     }
     ge-0/0/4 {
-        description to_RegionC-Acc01_Ethernet1;
+        description to_RegionB-Acc01_Ethernet3;
         gigether-options {
             802.3ad ae1;
         }
     }
     ge-0/0/5 {
-        description to_RegionC-Acc01_Ethernet2;
+        description to_RegionB-Acc01_Ethernet4;
         gigether-options {
             802.3ad ae1;
         }
     }
     ge-0/0/6 {
-        description to_RegionC-Acc02_Ethernet1;
+        description to_RegionB-Acc02_Ethernet3;
         gigether-options {
             802.3ad ae2;
         }
     }
     ge-0/0/7 {
-        description to_RegionC-Acc02_Ethernet2;
+        description to_RegionB-Acc02_Ethernet4;
         gigether-options {
             802.3ad ae2;
         }
@@ -102,10 +102,10 @@ interfaces {
         }
         unit 0 {
             family inet {
-                address 172.18.5.1/30;
+                address 172.17.5.2/30;
             }
             family inet6 {
-                address fc00:172:18:5::1/64;
+                address fc00:172:17:5::2/64;
             }
         }
     }
@@ -119,10 +119,10 @@ interfaces {
         unit 1010 {
             vlan-id 1010;
             family inet {
-                address 172.32.10.1/24 {
+                address 172.31.10.2/24 {
                     vrrp-group 1 {
-                        virtual-address 172.32.10.3;
-                        priority 110;
+                        virtual-address 172.31.10.3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae1 {
@@ -133,10 +133,10 @@ interfaces {
                 }
             }
             family inet6 {
-                address fc00:172:32:10::1/64 {
+                address fc00:172:31:10::2/64 {
                     vrrp-inet6-group 1 {
-                        virtual-inet6-address fc00:172:32:10::3;
-                        priority 110;
+                        virtual-inet6-address fc00:172:31:10::3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae1 {
@@ -150,10 +150,10 @@ interfaces {
         unit 1110 {
             vlan-id 1110;
             family inet {
-                address 172.32.110.1/24 {
+                address 172.31.110.2/24 {
                     vrrp-group 2 {
-                        virtual-address 172.32.110.3;
-                        priority 110;
+                        virtual-address 172.31.110.3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae1 {
@@ -164,10 +164,10 @@ interfaces {
                 }
             }
             family inet6 {
-                address fc00:172:32:110::1/64 {
+                address fc00:172:31:110::2/64 {
                     vrrp-inet6-group 2 {
-                        virtual-inet6-address fc00:172:32:110::3;
-                        priority 110;
+                        virtual-inet6-address fc00:172:31:110::3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae1 {
@@ -189,10 +189,10 @@ interfaces {
         unit 1020 {
             vlan-id 1020;
             family inet {
-                address 172.32.20.1/24 {
+                address 172.31.20.2/24 {
                     vrrp-group 3 {
-                        virtual-address 172.32.20.3;
-                        priority 110;
+                        virtual-address 172.31.20.3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae2 {
@@ -203,10 +203,10 @@ interfaces {
                 }
             }
             family inet6 {
-                address fc00:172:32:20::1/64 {
+                address fc00:172:31:20::2/64 {
                     vrrp-inet6-group 3 {
-                        virtual-inet6-address fc00:172:32:20::3;
-                        priority 110;
+                        virtual-inet6-address fc00:172:31:20::3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae2 {
@@ -220,10 +220,10 @@ interfaces {
         unit 1120 {
             vlan-id 1120;
             family inet {
-                address 172.32.120.1/24 {
-                    vrrp-group 4 {
-                        virtual-address 172.32.120.3;
-                        priority 110;
+                address 172.31.120.2/24 {
+                    vrrp-group 2 {
+                        virtual-address 172.31.120.3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae2 {
@@ -234,10 +234,10 @@ interfaces {
                 }
             }
             family inet6 {
-                address fc00:172:32:120::1/64 {
-                    vrrp-inet6-group 4 {
-                        virtual-inet6-address fc00:172:32:120::3;
-                        priority 110;
+                address fc00:172:31:120::2/64 {
+                    vrrp-inet6-group 2 {
+                        virtual-inet6-address fc00:172:31:120::3;
+                        priority 100;
                         accept-data;
                         track {
                             interface ae2 {
@@ -258,7 +258,7 @@ interfaces {
     }
 }
 routing-options {
-    router-id 3.3.3.5;
+    router-id 2.2.2.5;
 }
 protocols {
     ospf {

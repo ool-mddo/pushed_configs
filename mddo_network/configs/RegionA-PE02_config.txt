@@ -1,8 +1,8 @@
 show configuration 
-## Last commit: 2022-02-22 18:35:30 UTC by vrnetlab
+## Last commit: 2022-02-10 08:23:31 UTC by root
 version 18.1R1.9;
 system {
-    host-name RegionD-PE02;
+    host-name RegionA-PE02;
     root-authentication {
         encrypted-password "$6$vOte4zs5$j1X3fElYvJSt8VPNXx2KzRNrZIkp9CeRX83/W4wQo5K4Tl/MHZeMcvbymEzm9/2ya3S4hU993YDSLY26ROGnW/"; ## SECRET-DATA
     }
@@ -11,7 +11,7 @@ system {
             uid 2000;
             class super-user;
             authentication {
-                encrypted-password "$6$J6ejaVYH$tGgA7n6s6eb.QUX.RpHNVw9xlGNWPK6D8NEVbJt/8B6/PpREFVDSbvuPJn3/HwzklK8vdJ/MOpB01M/fwroT51"; ## SECRET-DATA
+                encrypted-password "$6$rjn7I3M2$PEFzwwuHS3DC6iqKBLLZfehuRhoxZFFGfFIAnbhPyFQBI5yx7PGeY1RuWKUf3HBe6ahE2C9q8XYRh8Ml4QDna."; ## SECRET-DATA
             }
         }
     }
@@ -43,35 +43,46 @@ chassis {
 }
 interfaces {
     ge-0/0/0 {
-        description to_RegionE-PE01_ge-0/0/0;
+        description to_RegionB-PE02_ge-0/0/0;
         unit 0 {
             family inet {
-                address 10.1.4.1/30;
+                address 10.1.1.1/30;
             }
             family inet6 {
-                address fc00:10:1:4::1/64;
+                address fc00:10:1:1::1/64;
             }
         }
     }
     ge-0/0/1 {
-        description to_RegionD-PE01_ge-0/0/1;
+        description to_RegionA-PE01_ge-0/0/1;
         unit 0 {
             family inet {
-                address 172.19.0.2/30;
+                address 172.16.0.2/30;
             }
             family inet6 {
-                address fc00:172:19::2/64;
+                address fc00:172:16::2/64;
             }
         }
     }
     ge-0/0/3 {
-        description to_RegionD-CE02_ge-0/0/1;
+        description to_RegionA-CE02_Ethernet2;
         unit 0 {
             family inet {
-                address 172.19.4.1/30;
+                address 172.16.4.1/30;
             }
             family inet6 {
-                address fc00:172:19:4::1/64;
+                address fc00:172:16:4::1/64;
+            }
+        }
+    }
+    ge-0/0/4 {
+        description to_RegionB-PE01_ge-0/0/4;
+        unit 0 {
+            family inet {
+                address 10.1.3.1/30;
+            }
+            family inet6 {
+                address fc00:10:1:3::1/64;
             }
         }
     }
@@ -79,16 +90,6 @@ interfaces {
         unit 0 {
             family inet {
                 address 10.0.0.15/24;
-            }
-        }
-    }
-    lo0 {
-        unit 0 {
-            family inet {
-                address 4.4.4.5/32;
-            }
-            family inet6 {
-                address fc00:4:4:4::5/64;
             }
         }
     }
@@ -102,54 +103,49 @@ routing-options {
     generate {
         route 0.0.0.0/0 discard;
     }
-    router-id 4.4.4.5;
-    autonomous-system 65003;
+    router-id 1.1.1.2;
+    autonomous-system 65000;
 }
 protocols {
-    bgp { 
-        group EXT { 
+    bgp {
+        group EXT {
             type external;
             export EXPORTOSPF;
-            neighbor 10.1.4.2 {
-                peer-as 65004;
+            neighbor 10.1.1.2 {
+                peer-as 65001;
             }
-            neighbor fc00:10:1:4::2 {
-                peer-as 65004;
+            neighbor 10.1.3.2 {
+                peer-as 65001;
+            }
+            neighbor fc00:10:1:1::2 {
+                peer-as 65001;
+            }
+            neighbor fc00:10:1:3::2 {
+                peer-as 65001;
             }
         }
         group INT {
             type internal;
-            local-address 4.4.4.5;
             export EXPORTOSPF;
-            neighbor 4.4.4.4 {
-                peer-as 65003;
+            neighbor 172.16.0.1 {
+                peer-as 65000;
             }
-        }
-        group INT6 {
-            type internal;
-            local-address fc00:4:4:4::5;
-            export EXPORTOSPF;
-            neighbor fc00:4:4:4::4 {
-                peer-as 65003;
+            neighbor fc00:172:16::1 {
+                peer-as 65000;
             }
         }
     }
     ospf {
         export ospf-default;
         area 0.0.0.0 {
-            interface ge-0/0/2.0;
             interface ge-0/0/3.0;
             interface ge-0/0/1.0;
-            interface lo0.0;
         }
     }
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
-            interface ge-0/0/2.0;
             interface ge-0/0/3.0;
-            interface ge-0/0/1.0;
-            interface lo0.0;
         }
     }
     lldp {
@@ -157,6 +153,12 @@ protocols {
     }
 }
 policy-options {
+    policy-statement EXPORTBGP {
+        term 1 {
+            from protocol [ bgp direct ];
+            then accept;
+        }
+    }
     policy-statement EXPORTOSPF {
         term 1 {
             from protocol [ ospf direct ospf3 ];
@@ -176,4 +178,3 @@ policy-options {
         then accept;
     }
 }
-

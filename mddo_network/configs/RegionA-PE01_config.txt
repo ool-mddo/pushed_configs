@@ -1,8 +1,8 @@
 show configuration 
-## Last commit: 2022-02-22 18:35:30 UTC by vrnetlab
+## Last commit: 2022-02-10 08:22:39 UTC by vrnetlab
 version 18.1R1.9;
 system {
-    host-name RegionE-PE01;
+    host-name RegionA-PE01;
     root-authentication {
         encrypted-password "$6$vOte4zs5$j1X3fElYvJSt8VPNXx2KzRNrZIkp9CeRX83/W4wQo5K4Tl/MHZeMcvbymEzm9/2ya3S4hU993YDSLY26ROGnW/"; ## SECRET-DATA
     }
@@ -43,35 +43,46 @@ chassis {
 }
 interfaces {
     ge-0/0/0 {
-        description to_RegionD-PE02_ge-0/0/0;
+        description to_RegionB-PE01_ge-0/0/0;
         unit 0 {
             family inet {
-                address 10.1.4.2/30;
+                address 10.1.0.1/30;
             }
             family inet6 {
-                address fc00:10:1:4::2/64;
+                address fc00:10:1::1/64;
             }
         }
     }
     ge-0/0/1 {
-        description to_RegionE-PE02_ge-0/0/1;
+        description to_RegionA-PE02_ge-0/0/1;
         unit 0 {
             family inet {
-                address 172.20.0.1/30;
+                address 172.16.0.1/30;
             }
             family inet6 {
-                address fc00:172:20::1/64;
+                address fc00:172:16::1/64;
             }
         }
     }
     ge-0/0/2 {
-        description to_RegionE-CE01_ge-0/0/0;
+        description to_RegionA-CE01_Ethernet1;
         unit 0 {
             family inet {
-                address 172.20.1.1/30;
+                address 172.16.1.1/30;
             }
             family inet6 {
-                address fc00:172:20:1::1/64;
+                address fc00:172:16:1::1/64;
+            }
+        }
+    }
+    ge-0/0/4 {
+        description to_RegionB-PE02_ge-0/0/4;
+        unit 0 {
+            family inet {
+                address 10.1.2.1/30;
+            }
+            family inet6 {
+                address fc00:10:1:2::1/64;
             }
         }
     }
@@ -79,16 +90,6 @@ interfaces {
         unit 0 {
             family inet {
                 address 10.0.0.15/24;
-            }
-        }
-    }
-    lo0 {
-        unit 0 {
-            family inet {
-                address 5.5.5.5/32;
-            }
-            family inet6 {
-                address fc00:5:5:5::5/64;
             }
         }
     }
@@ -102,35 +103,35 @@ routing-options {
     generate {
         route 0.0.0.0/0 discard;
     }
-    router-id 5.5.5.5;
-    autonomous-system 65004;
+    router-id 1.1.1.1;
+    autonomous-system 65000;
 }
 protocols {
-    bgp { 
-        group EXT { 
+    bgp {
+        group EXT {
             type external;
             export EXPORTOSPF;
-            neighbor 10.1.4.1 {
-                peer-as 65003;
+            neighbor 10.1.0.2 {
+                peer-as 65001;
             }
-            neighbor fc00:10:1:4::1 {
-                peer-as 65003;
+            neighbor 10.1.2.2 {
+                peer-as 65001;
+            }
+            neighbor fc00:10:1::2 {
+                peer-as 65001;
+            }
+            neighbor fc00:10:1:2::2 {
+                peer-as 65001;
             }
         }
         group INT {
             type internal;
-            local-address 5.5.5.5;
             export EXPORTOSPF;
-            neighbor 5.5.5.6 {
-                peer-as 65004;
+            neighbor 172.16.0.2 {
+                peer-as 65000;
             }
-        }
-        group INT6 {
-            type internal;
-            local-address fc00:5:5:5::5;
-            export EXPORTOSPF;
-            neighbor fc00:5:5:5::6 {
-                peer-as 65004;
+            neighbor fc00:172:16::2 {
+                peer-as 65000;
             }
         }
     }
@@ -138,18 +139,13 @@ protocols {
         export ospf-default;
         area 0.0.0.0 {
             interface ge-0/0/2.0;
-            interface ge-0/0/3.0;
             interface ge-0/0/1.0;
-            interface lo0.0;
         }
     }
     ospf3 {
         export ospf3-default;
         area 0.0.0.0 {
             interface ge-0/0/2.0;
-            interface ge-0/0/3.0;
-            interface ge-0/0/1.0;
-            interface lo0.0;
         }
     }
     lldp {
@@ -176,4 +172,3 @@ policy-options {
         then accept;
     }
 }
-

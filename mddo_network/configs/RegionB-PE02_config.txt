@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-02-22 18:35:30 UTC by vrnetlab
+## Last commit: 2022-02-08 17:02:03 UTC by root
 version 18.1R1.9;
 system {
     host-name RegionB-PE02;
@@ -11,7 +11,7 @@ system {
             uid 2000;
             class super-user;
             authentication {
-                encrypted-password "$6$J6ejaVYH$tGgA7n6s6eb.QUX.RpHNVw9xlGNWPK6D8NEVbJt/8B6/PpREFVDSbvuPJn3/HwzklK8vdJ/MOpB01M/fwroT51"; ## SECRET-DATA
+                encrypted-password "$6$CDmzGe/d$g43HmhI3FA.21JCYppnTg1h4q/JO4DOHSICLhhavqBem5zUTgKEcg5m9tBG1Ik6qmfb7L3v.wgj4/DkfgZejO0"; ## SECRET-DATA
             }
         }
     }
@@ -43,13 +43,13 @@ chassis {
 }
 interfaces {
     ge-0/0/0 {
-        description to_RegionC-PE01_ge-0/0/0;
+        description to_RegionA-PE02_ge-0/0/0;
         unit 0 {
             family inet {
-                address 10.1.2.1/30;
+                address 10.1.1.2/30;
             }
             family inet6 {
-                address fc00:10:1:2::1/64;
+                address fc00:10:1:1::2/64;
             }
         }
     }
@@ -75,20 +75,21 @@ interfaces {
             }
         }
     }
+    ge-0/0/4 {
+        description to_RegionA-PE01_ge-0/0/4;
+        unit 0 {
+            family inet {
+                address 10.1.2.2/30;
+            }
+            family inet6 {
+                address fc00:10:1:2::2/64;
+            }
+        }
+    }
     fxp0 {
         unit 0 {
             family inet {
                 address 10.0.0.15/24;
-            }
-        }
-    }
-    lo0 {
-        unit 0 {
-            family inet {
-                address 2.2.2.3/32;
-            }
-            family inet6 {
-                address fc00:2:2:2::3/64;
             }
         }
     }
@@ -106,30 +107,30 @@ routing-options {
     autonomous-system 65001;
 }
 protocols {
-    bgp { 
-        group EXT { 
+    bgp {
+        group EXT {
             type external;
             export EXPORTOSPF;
-            neighbor 10.1.2.2 {
-                peer-as 65002;
+            neighbor 10.1.1.1 {
+                peer-as 65000;
             }
-            neighbor fc00:10:1:2::2 {
-                peer-as 65002;
+            neighbor fc00:10:1:1::1 {
+                peer-as 65000;
+            }
+            neighbor 10.1.2.1 {
+                peer-as 65000;
+            }
+            neighbor fc00:10:1:2::1 {
+                peer-as 65000;
             }
         }
         group INT {
             type internal;
-            local-address 2.2.2.3;
             export EXPORTOSPF;
-            neighbor 2.2.2.2 {
+            neighbor 172.17.0.1 {
                 peer-as 65001;
             }
-        }
-        group INT6 {
-            type internal;
-            local-address fc00:2:2:2::3;
-            export EXPORTOSPF;
-            neighbor fc00:2:2:2::2 {
+            neighbor fc00:172:17::1 {
                 peer-as 65001;
             }
         }
@@ -139,8 +140,6 @@ protocols {
         area 0.0.0.0 {
             interface ge-0/0/2.0;
             interface ge-0/0/3.0;
-            interface ge-0/0/1.0;
-            interface lo0.0;
         }
     }
     ospf3 {
@@ -148,8 +147,6 @@ protocols {
         area 0.0.0.0 {
             interface ge-0/0/2.0;
             interface ge-0/0/3.0;
-            interface ge-0/0/1.0;
-            interface lo0.0;
         }
     }
     lldp {
@@ -157,6 +154,12 @@ protocols {
     }
 }
 policy-options {
+    policy-statement EXPORTBGP {
+        term 1 {
+            from protocol [ bgp direct ];
+            then accept;
+        }
+    }
     policy-statement EXPORTOSPF {
         term 1 {
             from protocol [ ospf direct ospf3 ];
@@ -176,4 +179,3 @@ policy-options {
         then accept;
     }
 }
-

@@ -1,5 +1,5 @@
 ! Command: show running-config
-! device: RegionE-Acc01 (vEOS-lab, EOS-4.27.0F)
+! device: RegionB-Acc01 (vEOS-lab, EOS-4.27.0F)
 !
 ! boot system flash:/vEOS-lab.swi
 !
@@ -11,7 +11,7 @@ transceiver qsfp default-mode 4x10G
 !
 service routing protocols model ribd
 !
-hostname RegionE-Acc01
+hostname RegionB-Acc01
 !
 spanning-tree mode mstp
 !
@@ -34,35 +34,35 @@ interface Port-Channel2
    port-channel min-links 1
 !
 interface Ethernet1
-   description to_RegionE-CE01_ge-0/0/4
+   description to_RegionB-CE01_ge-0/0/4
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet2
-   description to_RegionE-CE01_ge-0/0/5
+   description to_RegionB-CE01_ge-0/0/5
    load-interval 30
    speed forced 1000full
    channel-group 1 mode active
 !
 interface Ethernet3
-   description to_RegionE-CE02_ge-0/0/4
+   description to_RegionB-CE02_ge-0/0/4
    load-interval 30
    speed forced 1000full
    channel-group 2 mode active
 !
 interface Ethernet4
-   description to_RegionE-CE02_ge-0/0/5
+   description to_RegionB-CE02_ge-0/0/5
    load-interval 30
    speed forced 1000full
    channel-group 2 mode active
 !
 interface Ethernet5
-   description to_RegionE-Svr01_enp1s4
+   description to_RegionB-Svr01_enp1s4
    switchport access vlan 1010
 !
 interface Ethernet6
-   description to_RegionE-Svr01_enp1s5
+   description to_RegionB-Svr01_enp1s5
    switchport access vlan 1110
 !
 interface Ethernet7
