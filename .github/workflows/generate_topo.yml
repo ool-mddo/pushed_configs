@@ -20,7 +20,7 @@ jobs:
       run: |
         echo "$GITHUB_IO_REPO_DEPLOY_KEY" > ~/deploy_key.pem
         chmod 600 ~/deploy_key.pem
-        git clone -b release_gha git@github.com:ool-mddo/playground.git
+        git clone git@github.com:ool-mddo/playground.git
 
     - name: delete file
       run: rm -f ./playground/pushed_flag/*
