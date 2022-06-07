@@ -32,12 +32,6 @@
     },
     {
       "type": "device",
-      "id": 6,
-      "link": "http://localhost:8000/dcim/devices/6/",
-      "name": "RegionA-PE01"
-    },
-    {
-      "type": "device",
       "id": 8,
       "link": "http://localhost:8000/dcim/devices/8/",
       "name": "RegionB-PE01"
@@ -77,6 +71,12 @@
       "id": 12,
       "link": "http://localhost:8000/dcim/devices/12/",
       "name": "RegionB-CE02"
+    },
+    {
+      "type": "device",
+      "id": 6,
+      "link": "http://localhost:8000/dcim/devices/6/",
+      "name": "RegionA-PE01"
     },
     {
       "type": "device",
@@ -320,7 +320,7 @@
     {
       "source": "RegionA-PE02",
       "target": "RegionB-PE02",
-      "cable_id": 19,
+      "cable_id": 20,
       "meta": {
         "interface": {
           "source": "ge-0/0/0",
@@ -348,14 +348,284 @@
       "class": "one-gig"
     },
     {
-      "source": "RegionA-PE01",
+      "source": "RegionA-PE02",
       "target": "RegionB-PE01",
+      "cable_id": 21,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/4",
+          "source_lag": null,
+          "target": "ge-0/0/4",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-PE01",
+      "target": "RegionA-PE01",
       "cable_id": 17,
       "meta": {
         "interface": {
           "source": "ge-0/0/0",
           "source_lag": null,
           "target": "ge-0/0/0",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-PE01",
+      "target": "RegionB-PE02",
+      "cable_id": 38,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/1",
+          "source_lag": null,
+          "target": "ge-0/0/1",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-PE01",
+      "target": "RegionB-CE01",
+      "cable_id": 34,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/2",
+          "source_lag": null,
+          "target": "ge-0/0/0",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE01",
+      "target": "RegionB-CE02",
+      "cable_id": 35,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/2",
+          "source_lag": null,
+          "target": "ge-0/0/2",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE01",
+      "target": "RegionB-CE02",
+      "cable_id": 36,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/3",
+          "source_lag": null,
+          "target": "ge-0/0/3",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE01",
+      "target": "RegionB-Acc01",
+      "cable_id": 22,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/4",
+          "source_lag": null,
+          "target": "Ethernet1",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE01",
+      "target": "RegionB-Acc01",
+      "cable_id": 23,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/5",
+          "source_lag": null,
+          "target": "Ethernet2",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE01",
+      "target": "RegionB-Acc02",
+      "cable_id": 28,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/6",
+          "source_lag": null,
+          "target": "Ethernet1",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE01",
+      "target": "RegionB-Acc02",
+      "cable_id": 29,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/7",
+          "source_lag": null,
+          "target": "Ethernet2",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc02",
+      "target": "RegionB-CE02",
+      "cable_id": 30,
+      "meta": {
+        "interface": {
+          "source": "Ethernet3",
+          "source_lag": null,
+          "target": "ge-0/0/6",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc02",
+      "target": "RegionB-CE02",
+      "cable_id": 31,
+      "meta": {
+        "interface": {
+          "source": "Ethernet4",
+          "source_lag": null,
+          "target": "ge-0/0/7",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc02",
+      "target": "RegionB-Svr02",
+      "cable_id": 32,
+      "meta": {
+        "interface": {
+          "source": "Ethernet5",
+          "source_lag": null,
+          "target": "enp1s4",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc02",
+      "target": "RegionB-Svr02",
+      "cable_id": 33,
+      "meta": {
+        "interface": {
+          "source": "Ethernet6",
+          "source_lag": null,
+          "target": "enp1s5",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc01",
+      "target": "RegionB-CE02",
+      "cable_id": 24,
+      "meta": {
+        "interface": {
+          "source": "Ethernet3",
+          "source_lag": null,
+          "target": "ge-0/0/4",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc01",
+      "target": "RegionB-CE02",
+      "cable_id": 25,
+      "meta": {
+        "interface": {
+          "source": "Ethernet4",
+          "source_lag": null,
+          "target": "ge-0/0/5",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc01",
+      "target": "RegionB-Svr01",
+      "cable_id": 26,
+      "meta": {
+        "interface": {
+          "source": "Ethernet5",
+          "source_lag": null,
+          "target": "enp1s4",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-Acc01",
+      "target": "RegionB-Svr01",
+      "cable_id": 27,
+      "meta": {
+        "interface": {
+          "source": "Ethernet6",
+          "source_lag": null,
+          "target": "enp1s5",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "RegionB-CE02",
+      "target": "RegionB-PE02",
+      "cable_id": 37,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/1",
+          "source_lag": null,
+          "target": "ge-0/0/3",
           "target_lag": null
         },
         "bandwidth": "1G"
@@ -378,254 +648,14 @@
       "class": "one-gig"
     },
     {
-      "source": "RegionB-PE01",
+      "source": "RegionA-PE01",
       "target": "RegionB-PE02",
-      "cable_id": 36,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/1",
-          "source_lag": null,
-          "target": "ge-0/0/1",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-PE01",
-      "target": "RegionB-CE01",
-      "cable_id": 32,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/2",
-          "source_lag": null,
-          "target": "ge-0/0/0",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE01",
-      "target": "RegionB-CE02",
-      "cable_id": 33,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/2",
-          "source_lag": null,
-          "target": "ge-0/0/2",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE01",
-      "target": "RegionB-CE02",
-      "cable_id": 34,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/3",
-          "source_lag": null,
-          "target": "ge-0/0/3",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE01",
-      "target": "RegionB-Acc01",
-      "cable_id": 20,
+      "cable_id": 19,
       "meta": {
         "interface": {
           "source": "ge-0/0/4",
           "source_lag": null,
-          "target": "Ethernet1",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE01",
-      "target": "RegionB-Acc01",
-      "cable_id": 21,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/5",
-          "source_lag": null,
-          "target": "Ethernet2",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE01",
-      "target": "RegionB-Acc02",
-      "cable_id": 26,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/6",
-          "source_lag": null,
-          "target": "Ethernet1",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE01",
-      "target": "RegionB-Acc02",
-      "cable_id": 27,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/7",
-          "source_lag": null,
-          "target": "Ethernet2",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc02",
-      "target": "RegionB-CE02",
-      "cable_id": 28,
-      "meta": {
-        "interface": {
-          "source": "Ethernet3",
-          "source_lag": null,
-          "target": "ge-0/0/6",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc02",
-      "target": "RegionB-CE02",
-      "cable_id": 29,
-      "meta": {
-        "interface": {
-          "source": "Ethernet4",
-          "source_lag": null,
-          "target": "ge-0/0/7",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc02",
-      "target": "RegionB-Svr02",
-      "cable_id": 30,
-      "meta": {
-        "interface": {
-          "source": "Ethernet5",
-          "source_lag": null,
-          "target": "enp1s4",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc02",
-      "target": "RegionB-Svr02",
-      "cable_id": 31,
-      "meta": {
-        "interface": {
-          "source": "Ethernet6",
-          "source_lag": null,
-          "target": "enp1s5",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc01",
-      "target": "RegionB-CE02",
-      "cable_id": 22,
-      "meta": {
-        "interface": {
-          "source": "Ethernet3",
-          "source_lag": null,
           "target": "ge-0/0/4",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc01",
-      "target": "RegionB-CE02",
-      "cable_id": 23,
-      "meta": {
-        "interface": {
-          "source": "Ethernet4",
-          "source_lag": null,
-          "target": "ge-0/0/5",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc01",
-      "target": "RegionB-Svr01",
-      "cable_id": 24,
-      "meta": {
-        "interface": {
-          "source": "Ethernet5",
-          "source_lag": null,
-          "target": "enp1s4",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-Acc01",
-      "target": "RegionB-Svr01",
-      "cable_id": 25,
-      "meta": {
-        "interface": {
-          "source": "Ethernet6",
-          "source_lag": null,
-          "target": "enp1s5",
-          "target_lag": null
-        },
-        "bandwidth": "1G"
-      },
-      "class": "one-gig"
-    },
-    {
-      "source": "RegionB-CE02",
-      "target": "RegionB-PE02",
-      "cable_id": 35,
-      "meta": {
-        "interface": {
-          "source": "ge-0/0/1",
-          "source_lag": null,
-          "target": "ge-0/0/3",
           "target_lag": null
         },
         "bandwidth": "1G"
