@@ -1,3 +1,4 @@
+from pybatfish.client.session import Session
 from pybatfish.client.commands import *
 from pybatfish.question.question import load_questions, list_questions
 from pybatfish.question import bfq
@@ -150,15 +151,15 @@ if __name__ == "__main__":
     else:
         nb = pynetbox.api(sys.argv[1], token=sys.argv[2], threading=True)
 
-    load_questions()
-    bf_init_snapshot("/mnt/mddo_network")
+    bf = Session()
+    bf.init_snapshot("/mnt/mddo_network")
     # exclude junos sub interface and other... TODO
     is_exclude_interface = lambda x:bool(
         re.search(r'\.\d+$', x.interface)  # e.g. ge-0/0/0.0
     )
     # judge LAG interface to exclude
     is_lag_interface = lambda x:bool(len(x)>0)
-    interfaces = bfq \
+    interfaces = bf.q \
         .interfaceProperties(properties="Description, Channel_Group, Channel_Group_Members") \
         .answer() \
         .frame() \
