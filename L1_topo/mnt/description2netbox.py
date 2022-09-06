@@ -222,7 +222,7 @@ if __name__ == "__main__":
         src_intf = intf
 
         # parse description
-        m = re.fullmatch(r"to_(.+)_(.+)", row["Description"])
+        m = re.fullmatch(r"to_(.+?)_(.+?)(?:_via_.+)?", row["Description"])
         if m is None:
             # skip if description is not in the expected format
             continue
