@@ -61,9 +61,19 @@ class Interface:
     name: str
     device: "Device"
 
+    @classmethod
+    def normalize_name(cls, name: str) -> str:
+        m = re.match(r"Hu(?:ndredGig(?:abit)?E(?:thernet)?)?(?P<ifnum>.+)", name, flags=re.IGNORECASE)
+        if m:
+            return f"HundredGigabitEthernet{m.group('ifnum')}"
+        m = re.match(r"Te(?:nGig(?:abit)?E(?:thernet)?)?(?P<ifnum>.+)", name, flags=re.IGNORECASE)
+        if m:
+            return f"TenGigabitEthernet{m.group('ifnum')}"
+        return name
+
     def __init__(self, device, name: str):
         self.device = device
-        self.name = name
+        self.name = self.normalize_name(name)
 
     def save(self, nb) -> "Interface":
         if hasattr(self, "id"):
