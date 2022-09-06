@@ -145,13 +145,13 @@ if __name__ == "__main__":
         .query('~(Channel_Group_Members.apply(@is_lag_interface))', engine='python') \
         .query('~(Interface.apply(@is_exclude_interface))', engine='python')
 
-    # check and greate meta entries
+    # check and create meta entries
     res = nb.dcim.sites.filter("dummy-site")
     if len(res) == 0:
         res = nb.dcim.sites.create(name="dummy-site", slug="dummy-site")
         site_id = res.id
     elif len(res) > 1:
-        print("abiguous site")
+        print("ambiguous site")
     else:
         site_id = list(res)[0].id
     
@@ -160,7 +160,7 @@ if __name__ == "__main__":
         res = nb.dcim.manufacturers.create(name="dummy-manufacturer", slug="dummy-manufacturer")
         manufacturer_id = res.id
     elif len(res) > 1:
-        print("abiguous manufacturer")
+        print("ambiguous manufacturer")
     else:
         manufacturer_id = list(res)[0].id
 
@@ -169,7 +169,7 @@ if __name__ == "__main__":
         res = nb.dcim.device_types.create(manufacturer=manufacturer_id, model="dummy-device_type", slug="dummy-device_type")
         device_type_id = res.id
     elif len(res) > 1:
-        print("abiguous device_type")
+        print("ambiguous device_type")
     else:
         device_type_id = list(res)[0].id
 
@@ -178,7 +178,7 @@ if __name__ == "__main__":
         res = nb.dcim.device_roles.create(name="dummy-device_role", slug="dummy-device_role")
         device_role_id = res.id
     elif len(res) > 1:
-        print("abiguous device_role")
+        print("ambiguous device_role")
     else:
         device_role_id = list(res)[0].id
 
@@ -201,6 +201,9 @@ if __name__ == "__main__":
 
         # parse description
         m = re.fullmatch(r"to_(.+)_(.+)", row["Description"])
+        if m is None:
+            # skip if description is not in the expected format
+            continue
         device_name, interface_name = m.groups()
 
         # search dst device
