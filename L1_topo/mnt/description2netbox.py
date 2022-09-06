@@ -1,7 +1,7 @@
 from pybatfish.client.commands import *
 from pybatfish.question.question import load_questions, list_questions
 from pybatfish.question import bfq
-from typing import Dict
+from typing import Dict, Optional
 import re
 import pynetbox
 import sys
@@ -16,25 +16,43 @@ class Cable:
         self.a = a
         self.b = b
 
-    def save(self, nb) -> "Cable":
+    def save(self, nb) -> Optional["Cable"]:
         if hasattr(self, "id"):
             return self
+        # search exact cable
         searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.a.id, termination_b_type="dcim.interface", termination_b_id=self.b.id)
-        if len(searched_cable) == 0:
-            searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.b.id, termination_b_type="dcim.interface", termination_b_id=self.a.id)
-            if len(searched_cable) == 0:
-                cable = nb.dcim.cables.create(termination_a_type="dcim.interface", termination_a_id=self.a.id, termination_b_type="dcim.interface", termination_b_id=self.b.id)
-                self.id = cable.id
-            elif len(searched_cable) == 1:
-                self.id = list(searched_cable)[0].id
-            elif len(searched_cable) > 1:
-                # ERROR
-                pass
-        elif len(searched_cable) == 1:
+        if len(searched_cable) == 1:
+            # already exists
             self.id = list(searched_cable)[0].id
+            return self
         elif len(searched_cable) > 1:
             # ERROR
-            pass
+            raise Exception("ambiguous cable")
+        searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.b.id, termination_b_type="dcim.interface", termination_b_id=self.a.id)
+        if len(searched_cable) == 1:
+            # already exists
+            self.id = list(searched_cable)[0].id
+            return self
+        elif len(searched_cable) > 1:
+            # ERROR
+            raise Exception("ambiguous cable")
+
+        # check each termination interface is not connected
+        searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.a.id)
+        if len(searched_cable) != 0:
+            print(f"skip creating cable {self.a} -- {self.b}, reason: {self.a} is already connected")
+            return None
+        searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.b.id)
+        if len(searched_cable) != 0:
+            print(f"skip creating cable {self.a} -- {self.b}, reason: {self.b} is already connected")
+            return None
+
+        print(f"creating cable {self.a} -- {self.b}")
+        # NetBox 3.3
+        cable = nb.dcim.cables.create(a_terminations=[{"object_type":"dcim.interface", "object_id": self.a.id}], b_terminations=[{"object_type":"dcim.interface", "object_id": self.b.id}])
+        # prior 3.2
+        # cable = nb.dcim.cables.create(termination_a_type="dcim.interface", termination_a_id=self.a.id, termination_b_type="dcim.interface", termination_b_id=self.b.id)
+        self.id = cable.id
         return self
 
 class Interface:
@@ -64,6 +82,9 @@ class Interface:
         else:
             self.id = list(searched_interface)[0].id
         return self
+
+    def __str__(self) -> str:
+        return f"{self.device.name}[{self.name}](id={self.id})"
 
 class Device:
     id: int
