@@ -40,7 +40,7 @@ while unknown_device:
     node = {
         "type": "device",
         "id": device["id"],
-        "link": "http://localhost:8000/dcim/devices/" + str(device["id"]) + "/",
+        "link": f"{sys.argv[1]}/dcim/devices/{str(device['id'])}/",
         "name": device["name"],
     }
     if re.search(r"router", device["device_role"]["name"], flags=re.IGNORECASE):
@@ -70,31 +70,31 @@ while unknown_device:
             continue
 
         link = {}
-        if interface["connected_endpoint"] is None:
+        if interface["connected_endpoints"] is None or len(interface["connected_endpoints"]) == 0:
             continue
         # connect directly or via patch panel
-        if interface["connected_endpoint_type"] == "dcim.interface":
+        if interface["connected_endpoints_type"] == "dcim.interface":
             link = {
                 "source": device["name"],
-                "target": interface["connected_endpoint"]["device"]["name"],
-                "cable_id": interface["connected_endpoint"]["cable"],
+                "target": interface["connected_endpoints"][0]["device"]["name"],
+                "cable_id": interface["connected_endpoints"][0]["cable"],
                 "meta": {
                     "interface": {
                         "source": interface["name"],
                         "source_lag": interface["lag"]["name"] if interface["lag"] is not None else None,
-                        "target": interface["connected_endpoint"]["name"],
+                        "target": interface["connected_endpoints"][0]["name"],
                         "target_lag": None,
                     }
                 }
             }
-            if interface["connected_endpoint"]["device"]["id"] not in known_device.keys():
-                unknown_device[interface["connected_endpoint"]["device"]["id"]] = True
+            if interface["connected_endpoints"][0]["device"]["id"] not in known_device.keys():
+                unknown_device[interface["connected_endpoints"][0]["device"]["id"]] = True
         # connect via circuit
         # TODO: cable_id
-        elif interface["connected_endpoint_type"] == "circuits.circuittermination":
+        elif interface["connected_endpoints_type"] == "circuits.circuittermination":
             link = {
                 "source": device["name"],
-                "target": interface["connected_endpoint"]["circuit"]["cid"],
+                "target": interface["connected_endpoints"][0]["circuit"]["cid"],
                 "meta": {
                     "interface": {
                         "source": interface["name"],
