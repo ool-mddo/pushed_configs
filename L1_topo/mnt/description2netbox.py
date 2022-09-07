@@ -68,7 +68,7 @@ class Interface:
             return f"HundredGigabitEthernet{m.group('ifnum')}"
         m = re.match(r"Te(?:nGig(?:abit)?E(?:thernet)?)?(?P<ifnum>.+)", name, flags=re.IGNORECASE)
         if m:
-            return f"TenGigabitEthernet{m.group('ifnum')}"
+            return f"TenGigE{m.group('ifnum')}"
         return name
 
     def __init__(self, device, name: str):
