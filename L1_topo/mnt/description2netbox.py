@@ -1,7 +1,8 @@
+from pybatfish.client.session import Session
 from pybatfish.client.commands import *
 from pybatfish.question.question import load_questions, list_questions
 from pybatfish.question import bfq
-from typing import Dict
+from typing import Dict, Optional
 import re
 import pynetbox
 import sys
@@ -16,25 +17,43 @@ class Cable:
         self.a = a
         self.b = b
 
-    def save(self, nb) -> "Cable":
+    def save(self, nb) -> Optional["Cable"]:
         if hasattr(self, "id"):
             return self
+        # search exact cable
         searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.a.id, termination_b_type="dcim.interface", termination_b_id=self.b.id)
-        if len(searched_cable) == 0:
-            searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.b.id, termination_b_type="dcim.interface", termination_b_id=self.a.id)
-            if len(searched_cable) == 0:
-                cable = nb.dcim.cables.create(termination_a_type="dcim.interface", termination_a_id=self.a.id, termination_b_type="dcim.interface", termination_b_id=self.b.id)
-                self.id = cable.id
-            elif len(searched_cable) == 1:
-                self.id = list(searched_cable)[0].id
-            elif len(searched_cable) > 1:
-                # ERROR
-                pass
-        elif len(searched_cable) == 1:
+        if len(searched_cable) == 1:
+            # already exists
             self.id = list(searched_cable)[0].id
+            return self
         elif len(searched_cable) > 1:
             # ERROR
-            pass
+            raise Exception("ambiguous cable")
+        searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.b.id, termination_b_type="dcim.interface", termination_b_id=self.a.id)
+        if len(searched_cable) == 1:
+            # already exists
+            self.id = list(searched_cable)[0].id
+            return self
+        elif len(searched_cable) > 1:
+            # ERROR
+            raise Exception("ambiguous cable")
+
+        # check each termination interface is not connected
+        searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.a.id)
+        if len(searched_cable) != 0:
+            print(f"skip creating cable {self.a} -- {self.b}, reason: {self.a} is already connected")
+            return None
+        searched_cable = nb.dcim.cables.filter(termination_a_type="dcim.interface", termination_a_id=self.b.id)
+        if len(searched_cable) != 0:
+            print(f"skip creating cable {self.a} -- {self.b}, reason: {self.b} is already connected")
+            return None
+
+        print(f"creating cable {self.a} -- {self.b}")
+        # NetBox 3.3
+        cable = nb.dcim.cables.create(a_terminations=[{"object_type":"dcim.interface", "object_id": self.a.id}], b_terminations=[{"object_type":"dcim.interface", "object_id": self.b.id}])
+        # prior 3.2
+        # cable = nb.dcim.cables.create(termination_a_type="dcim.interface", termination_a_id=self.a.id, termination_b_type="dcim.interface", termination_b_id=self.b.id)
+        self.id = cable.id
         return self
 
 class Interface:
@@ -42,9 +61,19 @@ class Interface:
     name: str
     device: "Device"
 
+    @classmethod
+    def normalize_name(cls, name: str) -> str:
+        m = re.match(r"Hu(?:ndredGig(?:abit)?E(?:thernet)?)?(?P<ifnum>.+)", name, flags=re.IGNORECASE)
+        if m:
+            return f"HundredGigabitEthernet{m.group('ifnum')}"
+        m = re.match(r"Te(?:nGig(?:abit)?E(?:thernet)?)?(?P<ifnum>.+)", name, flags=re.IGNORECASE)
+        if m:
+            return f"TenGigE{m.group('ifnum')}"
+        return name
+
     def __init__(self, device, name: str):
         self.device = device
-        self.name = name
+        self.name = self.normalize_name(name)
 
     def save(self, nb) -> "Interface":
         if hasattr(self, "id"):
@@ -64,6 +93,9 @@ class Interface:
         else:
             self.id = list(searched_interface)[0].id
         return self
+
+    def __str__(self) -> str:
+        return f"{self.device.name}[{self.name}](id={self.id})"
 
 class Device:
     id: int
@@ -129,15 +161,15 @@ if __name__ == "__main__":
     else:
         nb = pynetbox.api(sys.argv[1], token=sys.argv[2], threading=True)
 
-    load_questions()
-    bf_init_snapshot("/mnt/mddo_network")
+    bf = Session()
+    bf.init_snapshot("/mnt/mddo_network")
     # exclude junos sub interface and other... TODO
     is_exclude_interface = lambda x:bool(
         re.search(r'\.\d+$', x.interface)  # e.g. ge-0/0/0.0
     )
     # judge LAG interface to exclude
     is_lag_interface = lambda x:bool(len(x)>0)
-    interfaces = bfq \
+    interfaces = bf.q \
         .interfaceProperties(properties="Description, Channel_Group, Channel_Group_Members") \
         .answer() \
         .frame() \
@@ -145,13 +177,13 @@ if __name__ == "__main__":
         .query('~(Channel_Group_Members.apply(@is_lag_interface))', engine='python') \
         .query('~(Interface.apply(@is_exclude_interface))', engine='python')
 
-    # check and greate meta entries
+    # check and create meta entries
     res = nb.dcim.sites.filter("dummy-site")
     if len(res) == 0:
         res = nb.dcim.sites.create(name="dummy-site", slug="dummy-site")
         site_id = res.id
     elif len(res) > 1:
-        print("abiguous site")
+        print("ambiguous site")
     else:
         site_id = list(res)[0].id
     
@@ -160,7 +192,7 @@ if __name__ == "__main__":
         res = nb.dcim.manufacturers.create(name="dummy-manufacturer", slug="dummy-manufacturer")
         manufacturer_id = res.id
     elif len(res) > 1:
-        print("abiguous manufacturer")
+        print("ambiguous manufacturer")
     else:
         manufacturer_id = list(res)[0].id
 
@@ -169,7 +201,7 @@ if __name__ == "__main__":
         res = nb.dcim.device_types.create(manufacturer=manufacturer_id, model="dummy-device_type", slug="dummy-device_type")
         device_type_id = res.id
     elif len(res) > 1:
-        print("abiguous device_type")
+        print("ambiguous device_type")
     else:
         device_type_id = list(res)[0].id
 
@@ -178,7 +210,7 @@ if __name__ == "__main__":
         res = nb.dcim.device_roles.create(name="dummy-device_role", slug="dummy-device_role")
         device_role_id = res.id
     elif len(res) > 1:
-        print("abiguous device_role")
+        print("ambiguous device_role")
     else:
         device_role_id = list(res)[0].id
 
@@ -200,7 +232,10 @@ if __name__ == "__main__":
         src_intf = intf
 
         # parse description
-        m = re.fullmatch(r"to_(.+)_(.+)", row["Description"])
+        m = re.fullmatch(r"to_(.+?)_(.+?)(?:_via_.+)?", row["Description"])
+        if m is None:
+            # skip if description is not in the expected format
+            continue
         device_name, interface_name = m.groups()
 
         # search dst device

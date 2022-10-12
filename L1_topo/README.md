@@ -13,7 +13,7 @@
   * [sample](inet-henge.sample.json)
 
 ```
-L1_topo# python netbox-topology.py http://localhost:8000 0123456789abcdef0123456789abcdef01234567 1 > ../inet-henge.sample.json
+L1_topo# python netbox2inet-henge.py http://localhost:8000 0123456789abcdef0123456789abcdef01234567 1 > ../inet-henge.sample.json
 {1: True}
 {5: True, 2: True, 3: True, 4: True}
 {5: True, 2: True, 3: True, 9: True, 10: True}
