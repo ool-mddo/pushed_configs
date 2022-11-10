@@ -1,0 +1,79 @@
+! Command: show running-config
+! device: RegionB-RT1 (vEOS-lab, EOS-4.27.0F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+no aaa root
+!
+username vrnetlab privilege 0 secret sha512 $6$j/1ec/hroJ83bwpA$oDU/uN/eBz4U6y8woe7iG/nVnczT3Ny0rPqd/NuD1LJQsLQ7jFq8WdMFzxjlom2SWeSjq3hSm4R7zAe3ROQBD0
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname RegionB-RT1
+!
+spanning-tree mode mstp
+!
+interface Ethernet1
+   description to_RegionB-RT2_Ethernet1
+   no switchport
+   ip address 192.168.1.1/30
+!
+interface Ethernet2
+   description to_RegionA-RT1_ge-0/0/1
+   no switchport
+   ip address 172.16.0.2/30
+!
+interface Ethernet3
+   description to_RegionC-RT1_GigabitEthernet0/0/0/2
+   no switchport
+   ip address 172.16.2.1/30
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Ethernet13
+!
+interface Ethernet14
+!
+interface Ethernet15
+!
+interface Ethernet16
+!
+interface Ethernet17
+!
+interface Ethernet18
+!
+interface Ethernet19
+!
+interface Management1
+   ip address 10.0.0.15/24
+!
+ip routing
+!
+router ospf 1
+   router-id 1.1.1.1
+   passive-interface default
+   no passive-interface Ethernet1
+   no passive-interface Ethernet2
+   no passive-interface Ethernet3
+   network 0.0.0.0/0 area 0.0.0.0
+   max-lsa 12000
+!
+end

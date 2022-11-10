@@ -1,0 +1,15 @@
+{
+    "hostInterfaces": {
+        "ens2": {
+            "gateway": "192.168.100.1",
+            "name": "ens2",
+            "prefix": "192.168.100.10/25"
+        },
+        "ens4": {
+            "name": "ens4",
+            "prefix": "10.0.0.15/24"
+        }
+    },
+    "hostname": "RegionC-Svr01",
+    "iptablesFile": ""
+}
