@@ -2,182 +2,162 @@
   "edges": [
     {
       "node1": {
-        "hostname": "RT1",
+        "hostname": "RegionA-RT1",
         "interfaceName": "ge-0/0/0"
       },
       "node2": {
-        "hostname": "SW1",
+        "hostname": "regiona-rt2",
+        "interfaceName": "ge-0/0/0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "regiona-rt2",
+        "interfaceName": "ge-0/0/0"
+      },
+      "node2": {
+        "hostname": "RegionA-RT1",
+        "interfaceName": "ge-0/0/0"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionA-RT1",
+        "interfaceName": "ge-0/0/1"
+      },
+      "node2": {
+        "hostname": "RegionB-RT1",
         "interfaceName": "Ethernet2"
       }
     },
     {
       "node1": {
-        "hostname": "SW1",
+        "hostname": "RegionB-RT1",
         "interfaceName": "Ethernet2"
       },
       "node2": {
-        "hostname": "RT1",
-        "interfaceName": "ge-0/0/0"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RT1",
-        "interfaceName": "ge-0/0/1"
-      },
-      "node2": {
-        "hostname": "RT2",
-        "interfaceName": "ge-0/0/0"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RT2",
-        "interfaceName": "ge-0/0/0"
-      },
-      "node2": {
-        "hostname": "RT1",
+        "hostname": "RegionA-RT1",
         "interfaceName": "ge-0/0/1"
       }
     },
     {
       "node1": {
-        "hostname": "RT1",
+        "hostname": "RegionA-RT1",
         "interfaceName": "ge-0/0/2"
       },
       "node2": {
-        "hostname": "RT3",
-        "interfaceName": "ge-0/0/0"
+        "hostname": "RegionC-RT1",
+        "interfaceName": "GigabitEthernet0/0/0/1"
       }
     },
     {
       "node1": {
-        "hostname": "RT3",
-        "interfaceName": "ge-0/0/0"
+        "hostname": "RegionC-RT1",
+        "interfaceName": "GigabitEthernet0/0/0/1"
       },
       "node2": {
-        "hostname": "RT1",
+        "hostname": "RegionA-RT1",
         "interfaceName": "ge-0/0/2"
       }
     },
     {
       "node1": {
-        "hostname": "RT3",
-        "interfaceName": "ge-0/0/1"
+        "hostname": "RegionC-RT1",
+        "interfaceName": "GigabitEthernet0/0/0/0"
       },
       "node2": {
-        "hostname": "SW2",
-        "interfaceName": "Ethernet2"
+        "hostname": "regionc-rt2",
+        "interfaceName": "GigabitEthernet0/0/0/0"
       }
     },
     {
       "node1": {
-        "hostname": "SW2",
-        "interfaceName": "Ethernet2"
+        "hostname": "regionc-rt2",
+        "interfaceName": "GigabitEthernet0/0/0/0"
       },
       "node2": {
-        "hostname": "RT3",
-        "interfaceName": "ge-0/0/1"
+        "hostname": "RegionC-RT1",
+        "interfaceName": "GigabitEthernet0/0/0/0"
       }
     },
     {
       "node1": {
-        "hostname": "SW2",
-        "interfaceName": "Ethernet1"
+        "hostname": "RegionC-RT1",
+        "interfaceName": "GigabitEthernet0/0/0/2"
       },
       "node2": {
-        "hostname": "RT2",
-        "interfaceName": "ge-0/0/1"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RT2",
-        "interfaceName": "ge-0/0/1"
-      },
-      "node2": {
-        "hostname": "SW2",
-        "interfaceName": "Ethernet1"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "SW2",
-        "interfaceName": "Ethernet3"
-      },
-      "node2": {
-        "hostname": "RT4",
-        "interfaceName": "ge-0/0/0"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "RT4",
-        "interfaceName": "ge-0/0/0"
-      },
-      "node2": {
-        "hostname": "SW2",
+        "hostname": "RegionB-RT1",
         "interfaceName": "Ethernet3"
       }
     },
     {
       "node1": {
-        "hostname": "RT4",
-        "interfaceName": "ge-0/0/1"
+        "hostname": "RegionB-RT1",
+        "interfaceName": "Ethernet3"
       },
       "node2": {
-        "hostname": "SW3",
+        "hostname": "RegionC-RT1",
+        "interfaceName": "GigabitEthernet0/0/0/2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "regionc-rt2",
+        "interfaceName": "GigabitEthernet0/0/0/1"
+      },
+      "node2": {
+        "hostname": "regionc-svr01",
+        "interfaceName": "ens2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "regionc-svr01",
+        "interfaceName": "ens2"
+      },
+      "node2": {
+        "hostname": "regionc-rt2",
+        "interfaceName": "GigabitEthernet0/0/0/1"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "RegionB-RT1",
+        "interfaceName": "Ethernet1"
+      },
+      "node2": {
+        "hostname": "regionb-rt2",
         "interfaceName": "Ethernet1"
       }
     },
     {
       "node1": {
-        "hostname": "SW3",
+        "hostname": "regionb-rt2",
         "interfaceName": "Ethernet1"
       },
       "node2": {
-        "hostname": "RT4",
-        "interfaceName": "ge-0/0/1"
+        "hostname": "RegionB-RT1",
+        "interfaceName": "Ethernet1"
       }
     },
     {
       "node1": {
-        "hostname": "SW3",
+        "hostname": "regionb-rt2",
         "interfaceName": "Ethernet2"
       },
       "node2": {
-        "hostname": "SERV2",
-        "interfaceName": "ge-0/0/0"
+        "hostname": "regionb-svr01",
+        "interfaceName": "ens2"
       }
     },
     {
       "node1": {
-        "hostname": "SERV2",
-        "interfaceName": "ge-0/0/0"
+        "hostname": "regionb-svr01",
+        "interfaceName": "ens2"
       },
       "node2": {
-        "hostname": "SW3",
+        "hostname": "regionb-rt2",
         "interfaceName": "Ethernet2"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "SW1",
-        "interfaceName": "Ethernet1"
-      },
-      "node2": {
-        "hostname": "SERV1",
-        "interfaceName": "ge-0/0/0"
-      }
-    },
-    {
-      "node1": {
-        "hostname": "SERV1",
-        "interfaceName": "ge-0/0/0"
-      },
-      "node2": {
-        "hostname": "SW1",
-        "interfaceName": "Ethernet1"
       }
     }
   ]
