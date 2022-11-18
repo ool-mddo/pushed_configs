@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-11-09 23:44:16 UTC by vrnetlab
+## Last commit: 2022-11-18 05:25:49 UTC by vrnetlab
 version 18.1R1.9;
 system {
     host-name RegionA-RT1;
@@ -93,7 +93,7 @@ protocols {
 policy-options {
     policy-statement EXPORTOSPF {
         term 1 {
-            from protocol [ direct static ospf ];
+            from protocol [ direct static ];
             then accept;
         }
     }

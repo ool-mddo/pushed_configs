@@ -1,5 +1,5 @@
 show configuration 
-## Last commit: 2022-11-09 23:48:09 UTC by vrnetlab
+## Last commit: 2022-11-18 05:26:54 UTC by vrnetlab
 version 18.1R1.9;
 system {
     host-name RegionA-RT2;
@@ -46,7 +46,7 @@ interfaces {
         description to_RegionA-RT1_ge-0/0/0;
         unit 0 {
             family inet {
-                address 192.168.0.2/24;
+                address 192.168.0.2/30;
             }
         }
     }
@@ -63,4 +63,3 @@ routing-options {
         route 0.0.0.0/0 next-hop 192.168.0.1;
     }
 }
-
