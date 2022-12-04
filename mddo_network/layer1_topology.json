@@ -159,6 +159,26 @@
         "hostname": "regionb-rt2",
         "interfaceName": "Ethernet2"
       }
+    },
+    {
+      "node1": {
+        "hostname": "regiona-rt2",
+        "interfaceName": "ge-0/0/1"
+      },
+      "node2": {
+        "hostname": "regiona-svr02",
+        "interfaceName": "ens2"
+      }
+    },
+    {
+      "node1": {
+        "hostname": "regiona-svr02",
+        "interfaceName": "ens2"
+      },
+      "node2": {
+        "hostname": "regiona-rt2",
+        "interfaceName": "ge-0/0/1"
+      }
     }
   ]
 }

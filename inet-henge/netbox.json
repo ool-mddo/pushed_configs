@@ -14,14 +14,14 @@
     },
     {
       "type": "device",
-      "id": 7,
-      "link": "http://localhost:8000/dcim/devices/7/",
+      "id": 8,
+      "link": "http://localhost:8000/dcim/devices/8/",
       "name": "regionc-rt2"
     },
     {
       "type": "device",
-      "id": 8,
-      "link": "http://localhost:8000/dcim/devices/8/",
+      "id": 9,
+      "link": "http://localhost:8000/dcim/devices/9/",
       "name": "regionc-svr01"
     },
     {
@@ -32,14 +32,14 @@
     },
     {
       "type": "device",
-      "id": 5,
-      "link": "http://localhost:8000/dcim/devices/5/",
+      "id": 6,
+      "link": "http://localhost:8000/dcim/devices/6/",
       "name": "regionb-rt2"
     },
     {
       "type": "device",
-      "id": 6,
-      "link": "http://localhost:8000/dcim/devices/6/",
+      "id": 7,
+      "link": "http://localhost:8000/dcim/devices/7/",
       "name": "regionb-svr01"
     },
     {
@@ -47,6 +47,12 @@
       "id": 2,
       "link": "http://localhost:8000/dcim/devices/2/",
       "name": "regiona-rt2"
+    },
+    {
+      "type": "device",
+      "id": 5,
+      "link": "http://localhost:8000/dcim/devices/5/",
+      "name": "regiona-svr02"
     }
   ],
   "links": [
@@ -98,7 +104,7 @@
     {
       "source": "RegionC-RT1",
       "target": "regionc-rt2",
-      "cable_id": 7,
+      "cable_id": 8,
       "meta": {
         "interface": {
           "source": "GigabitEthernet0/0/0/0",
@@ -113,7 +119,7 @@
     {
       "source": "RegionC-RT1",
       "target": "RegionB-RT1",
-      "cable_id": 5,
+      "cable_id": 6,
       "meta": {
         "interface": {
           "source": "GigabitEthernet0/0/0/2",
@@ -128,7 +134,7 @@
     {
       "source": "regionc-rt2",
       "target": "regionc-svr01",
-      "cable_id": 8,
+      "cable_id": 9,
       "meta": {
         "interface": {
           "source": "GigabitEthernet0/0/0/1",
@@ -143,7 +149,7 @@
     {
       "source": "RegionB-RT1",
       "target": "regionb-rt2",
-      "cable_id": 4,
+      "cable_id": 5,
       "meta": {
         "interface": {
           "source": "Ethernet1",
@@ -158,10 +164,25 @@
     {
       "source": "regionb-rt2",
       "target": "regionb-svr01",
-      "cable_id": 6,
+      "cable_id": 7,
       "meta": {
         "interface": {
           "source": "Ethernet2",
+          "source_lag": null,
+          "target": "ens2",
+          "target_lag": null
+        },
+        "bandwidth": "1G"
+      },
+      "class": "one-gig"
+    },
+    {
+      "source": "regiona-rt2",
+      "target": "regiona-svr02",
+      "cable_id": 4,
+      "meta": {
+        "interface": {
+          "source": "ge-0/0/1",
           "source_lag": null,
           "target": "ens2",
           "target_lag": null
