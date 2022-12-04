@@ -1,0 +1,19 @@
+{
+    "hostInterfaces": {
+        "enp1s0": {
+            "name": "enp1s0",
+            "prefix": "192.168.122.15/24"
+        },
+        "ens2": {
+            "gateway": "192.168.100.1",
+            "name": "ens2",
+            "prefix": "192.168.100.210/24"
+        },
+        "ens4": {
+            "name": "ens4",
+            "prefix": "10.0.0.15/24"
+        }
+    },
+    "hostname": "RegionA-Svr02",
+    "iptablesFile": ""
+}
